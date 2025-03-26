@@ -41,7 +41,7 @@ body {
     top: 30px;
   }
   
-  .menu--principal {
+  .menu-main {
     display: none;
     flex-direction: column;
     background: #313131;
@@ -56,11 +56,11 @@ body {
     margin: 0;
   }
   
-  .menu--principal.active {
+  .menu-main.active {
     display: flex;
   }
   
-  .menu__link {
+  .menu-link {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bold;
@@ -69,7 +69,7 @@ body {
   }
   
   /* Home */
-  .imagem__fundo {
+  .background-image {
     background-image: url('img/fitness-man-battle-ropes-gym-600nw-2465140971\ 1.png');
     background-size: cover;
     background-position: center;
@@ -82,14 +82,14 @@ body {
     color: #FFFFFF;
   }
   
-  .titulo__home {
+  .title-home {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
   }
   
   /* Sobre */
-  .sobre__produto {
+  .about-product {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -98,19 +98,19 @@ body {
     padding: 20px;
   }
   
-  .sobre__produto h2 {
+  .about-product h2 {
     font-size: 30px;
     margin: 10px;
   }
   
-  .sobre__produto p {
+  .about-product p {
     font-size: 16px;
     text-align: justify;
     margin-top: 0;
     margin-bottom: 15px;
   }
   
-  .imagem_produto {
+  .product-image {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -118,7 +118,7 @@ body {
     align-items: center;
   }
   
-  .imagem_produto img {
+  .product-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -130,7 +130,7 @@ body {
       display: none;
     }
   
-    .menu--principal {
+    .menu-main {
       display: flex;
       flex-direction: row;
       position: static;
@@ -140,7 +140,7 @@ body {
       padding: 0;
     }
   
-    .menu__link {
+    .menu-link {
       padding: 0 15px;
     }
   
@@ -148,15 +148,15 @@ body {
       width: 50px; 
     }
   
-    .imagem__fundo {
+    .background-image {
       height: 600px;
     }
   
-    .titulo__home {
+    .titulo-home {
       font-size: 40px;
     }
   
-    .sobre__produto {
+    .about-product {
       flex-direction: row;
       text-align: left;
       gap: 80px;
@@ -164,16 +164,16 @@ body {
       margin: 0 auto;
     }
   
-    .sobre__produto h2 {
+    .about-product h2 {
       font-size: 50px;
       text-align: left;
     }
   
-    .imagem_produto {
+    .product-image {
       flex-direction: row;
     }
   
-    .imagem_produto img {
+    .product-image img {
       width: 400px;
       height: 200px;
     }
