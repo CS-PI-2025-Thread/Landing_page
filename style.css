@@ -7,7 +7,7 @@ body {
 }
 
 /* Planos e preços */
-.planos_precos {
+.plans-prices {
     text-align: center;
     padding: 20px;
     display: flex;
@@ -17,11 +17,11 @@ body {
     border-bottom: 5px solid #ffd700;
 }
 
-.planos_precos h2 {
+.plans-prices h2 {
     font-size: 30px; 
 }
 
-.container_planos {
+.container-plans{
     width: 100%;
     max-width: 400px;
     padding: 15px;
@@ -31,18 +31,18 @@ body {
 
 /* Telas maiores */
 @media (min-width: 768px) {
-    .planos_precos {
+    .plans-prices {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    .planos_precos h2 {
+    .plans-prices h2 {
         width: 100%;
         font-size: 50px;
     }
 
-    .container_planos {
+    .container-plans{
         width: 30%;
     }
 }
