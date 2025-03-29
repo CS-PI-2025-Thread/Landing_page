@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gym - Fitness Management Software">
     <link rel="stylesheet" href="style.css" />
     <title>Academia</title>
   </head>
   <body>
     <header>
       <div class="header-content">
-        <img class="logo" src="img/Icon.png" alt="logo" />
+        <img class="logo" src="img/Icon.png" alt="Academy logo" />
         <h1>Academia</h1>
       </div>
-      <div class="menu-mobile" onclick="toggleMenu()">☰</div>
       <nav class="header-nav">
         <ul class="menu menu-main">
           <li class="menu-item">
@@ -21,28 +21,79 @@
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link" href="#sobre">
+            <a class="menu-link" href="#about">
               <span class="menu-text">Sobre</span>
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link" href="#planos">
+            <a class="menu-link" href="#plans">
               <span class="menu-text">Planos</span>
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link" href="#contato">
+            <a class="menu-link" href="#contact">
               <span class="menu-text">Contato</span>
             </a>
           </li>
           <li class="menu-item">
-            <a class="menu-link" href="#equipe">
+            <a class="menu-link" href="#team">
               <span class="menu-text">Equipe</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#faq">
+              <span class="menu-text">FAQ</span>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="#reviews">
+              <span class="menu-text">Avaliações</span>
             </a>
           </li>
         </ul>
       </nav>
     </header>
+
+    <nav class="nav-mobile">
+      <div class="menu-mobile-icon" onclick="toggleMenu()">☰</div>
+      <ul class="menu menu-mobile">
+        <li class="menu-item">
+          <a class="menu-link active" href="#home" onclick="closeMenu()">
+            <span class="menu-text">Home</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#about" onclick="closeMenu()">
+            <span class="menu-text">Sobre</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#plans" onclick="closeMenu()">
+            <span class="menu-text">Planos</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#contact" onclick="closeMenu()">
+            <span class="menu-text">Contato</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#team" onclick="closeMenu()">
+            <span class="menu-text">Equipe</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#faq" onclick="closeMenu()">
+            <span class="menu-text">FAQ</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="#reviews" onclick="closeMenu()">
+            <span class="menu-text">Avaliações</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
     <div class="home" id="home">
       <div class="background-image">
@@ -52,7 +103,7 @@
       </div>
     </div>
 
-    <section class="about" id="sobre">
+    <section class="about" id="about">
       <div class="about-product">
         <h2>Sobre o projeto academia</h2>
       <p>
@@ -81,15 +132,15 @@
       <div class="product-image">
         <img
           src="img/fitness-man-battle-ropes-gym-600nw-2465140971 1.png"
-          alt="img1"
+          alt="Product software image 1"
         />
         <img
           src="img/fitness-man-battle-ropes-gym-600nw-2465140971 1.png"
-          alt="img2"
+          alt="Product software image 2"
         />
         <img
           src="img/fitness-man-battle-ropes-gym-600nw-2465140971 1.png"
-          alt="img3"
+          alt="Product software image 3"
         />
       </div>
     </section>
