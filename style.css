@@ -1,11 +1,40 @@
+.team {
+  justify-items: center;
+  align-items: center;
+}
+
 .div-cards {
-    margin-top: 20px;
-    gap: 20px;
-    justify-content: center;
+  /*display: flex;*/
+  justify-items: center;
+  align-items: center;
+  /*margin-top: 20px;*/
+  /*gap: 20px;*/
 }
 
 .card {
-    display: flex;
-    padding: 10px;
-    width: 250px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+
+  margin: 10px;
+}
+
+.card h3 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.card p {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.div-img {
+  margin-right: 10px;
+}
+
+.div-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
