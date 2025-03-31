@@ -26,8 +26,8 @@ body {
     padding: 0.75rem 1rem;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #272727;
-    background: #000000;
+    border: 1px solid #000000;
+    background: #272727;
     text-align: left;
     cursor: pointer;
     transition:  0.3s ease-in-out;
@@ -60,7 +60,7 @@ body {
     align-items: flex-start;
     gap: 0.625rem;
     border: 1px solid #000000;
-    transition: max-height 0.5s ease-out, padding 0.3s ease-out;
+    transition: 0.5s ease-out, padding 0.3s ease-out;
 }
 
 .accordion-item.active .accordion-body {
@@ -73,8 +73,6 @@ body {
 .accordion-item.active .accordion-header {
     background: #1d1c1c;
 }
-
-
 
 .bi-caret-down-fill{
     color: #ffd700;
@@ -94,10 +92,6 @@ body {
 
     .accordion-header {
         padding: 0.5rem 0.75rem;
-    }
-
-    .accordion-body {
-        padding: 0.75rem;
     }
 
     .accordion-header span{
