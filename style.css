@@ -1,8 +1,25 @@
 /* Configuração geral */
+:root{
+    --background-color: #313131;
+    --text-color: #f4f4f4;
+    --link-color: #ffd700;
+    --border-color: #ffd700;
+    --border-faq-color: #272727;
+    --background-faq-color:#272727;
+}
+:root[data-theme="contrast"]{
+    --background-color: #000000;
+    --text-color: #FFFFFF;
+    --link-color: #ffd900;
+    --border-color: #ffd900;
+    --border-faq-color: #ffd900;
+    --background-faq-color:#000000;
+}
+
 body {
-    background: #313131;
+    background: var(--background-color);
     font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
-    color: #f4f4f4;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
   }
@@ -15,8 +32,8 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #313131;
-    border-bottom: 5px solid #ffd700;
+    background-color: var(--background-color);
+    border-bottom: 5px solid var(--border-color);
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -37,14 +54,14 @@ html {
   .menu-main {
     display: none;
     flex-direction: column;
-    background: #313131;
+    background: var(--background-color);
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
     text-align: center;
     padding: 20px 0;
-    border-top: 3px solid #ffd700;
+    border-top: 3px solid var(--border-corlor);
     list-style: none;
     margin: 0;
   }
@@ -58,7 +75,7 @@ html {
     display: block;
     font-size: 30px;
     cursor: pointer;
-    color: #FFFFFF;
+    color: var(--text-color);
     position: absolute;
     right: 20px;
     top: 30px;
@@ -68,7 +85,7 @@ html {
   .menu-mobile {
     display: flex;
     flex-direction: column;
-    background: #313131;
+    background: var(--background-color);
     position: fixed;
     top: 0;
     right: -100%;
@@ -76,8 +93,8 @@ html {
     height: 40vh;
     text-align: center;
     padding-top: 60px;
-    border-left: 3px solid #ffd700;
-    border-bottom:3px solid #ffd700;
+    border-left: 3px solid var(--border-corlor);
+    border-bottom:3px solid var(--border-corlor);
     list-style: none;
     transition: right 0.5s ease;
     padding-left: 10px;
@@ -96,10 +113,28 @@ html {
   }
 
   .menu-link:hover {
-    background: #ffd700;
-    color: #313131;
+    color: var(--link-color);
 }
 
+.nav-mobile #toggleTheme{
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+    position: absolute;
+    right: 60px;
+    top: 34px;
+    z-index: 10;
+}
+
+#toggleTheme{
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--text-color);
+    position: relative;
+    bottom: 4px;
+}
   
   /* Home */
   .background-image {
@@ -112,7 +147,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--text-color);
   }
   
   .title-home {
@@ -134,12 +169,13 @@ html {
   .about-product h2 {
     font-size: 30px;
     margin: 10px;
+    margin-top: 30px;
   }
   
   .about-product p {
     font-size: 16px;
     text-align: justify;
-    margin-top: 0;
+    margin-top: 30px;
     margin-bottom: 15px;
   }
   
@@ -190,12 +226,16 @@ html {
     }
   
     .about-product h2 {
-      font-size: 40px;
+      font-size: 30px;
       text-align: left;
+      margin-top: 100px;
     }
   }
 
   @media screen and (min-width: 1024px) {
+    .nav-mobile #toggleTheme{
+        display: none;
+    }
     .menu-mobile-icon {
         display: none;
     }
@@ -222,16 +262,17 @@ html {
 
     .about-product h2 {
         font-size: 50px;
+        margin-top: 60px;
     }
 
     .product-image {
         flex-direction: row;
-      }
+    }
     
-      .product-image img {
+    .product-image img {
         width: 320px;
         height: 200px;
-      }
+     }
 }
 
 @media screen and (min-width: 1200px) {
@@ -245,6 +286,11 @@ html {
 
     .about-product {
         max-width: 1400px;
+    }
+
+    .about-product h2 {
+        font-size: 50px;
+        margin-top: 40px;
     }
 
     .product-image img {
