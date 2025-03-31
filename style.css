@@ -43,7 +43,7 @@ button:hover{
 }
 
 /* Telas maiores */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .plans-prices {
         flex-direction: row;
         justify-content: center;
@@ -56,6 +56,6 @@ button:hover{
     }
 
     .container-plans{
-        width: 30%;
+        width: 28%;
     }
 }
