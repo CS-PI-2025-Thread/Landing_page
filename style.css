@@ -4,37 +4,58 @@
 }
 
 .div-cards {
-  /*display: flex;*/
-  justify-items: center;
-  align-items: center;
-  /*margin-top: 20px;*/
-  /*gap: 20px;*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
 }
 
 .card {
   display: flex;
   justify-items: center;
   align-items: center;
-
   margin: 10px;
 }
 
-.card h3 {
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-
-.card p {
-  margin-top: 3px;
-  margin-bottom: 3px;
+.card h3,
+p {
+  margin: 3px;
 }
 
 .div-img {
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .div-img img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+
+.media-member {
+  display: flex;
+}
+
+.media-member-img {
+  width: 32px;
+  height: 32px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.div-content {
+  justify-items: center;
+  margin: 10px;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100px, 1fr)
+  ); /* Ajusta o número de colunas automaticamente */
+  gap: 10px; /* Espaço entre as células */
+  padding: 20px;
+  max-width: 500px; /* Ajuste opcional para limitar a largura */
+  margin: auto;
 }
