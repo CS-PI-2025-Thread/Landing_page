@@ -1,21 +1,4 @@
-/* Configuração geral */
-:root{
-    --background-color: #313131;
-    --text-color: #f4f4f4;
-    --link-color: #ffd700;
-    --border-color: #ffd700;
-    --border-faq-color: #272727;
-    --background-faq-color:#272727;
-}
-:root[data-theme="contrast"]{
-    --background-color: #000000;
-    --text-color: #FFFFFF;
-    --link-color: #ffd900;
-    --border-color: #ffd900;
-    --border-faq-color: #ffd900;
-    --background-faq-color:#000000;
-}
-
+@import url(variable.css);
 body {
     background: var(--background-color);
     font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
@@ -35,10 +18,17 @@ html {
     background-color: var(--background-color);
     border-bottom: 5px solid var(--border-color);
     width: 100%;
+    height: 100px;
+    top: 0;
     box-sizing: border-box;
-    position: relative;
+    position: fixed;
   }
   
+  main{
+    height: calc(100vh- 100px);
+    margin-top: 100px;
+  }
+
   .header-content {
     display: flex;
     align-items: center;
@@ -49,7 +39,6 @@ html {
     width: 30px; 
     height: auto;
   }
-
 
   .menu-main {
     display: none;
@@ -76,7 +65,7 @@ html {
     font-size: 30px;
     cursor: pointer;
     color: var(--text-color);
-    position: absolute;
+    position: fixed;
     right: 20px;
     top: 30px;
     z-index: 10;
@@ -121,10 +110,11 @@ html {
     font-size: 30px;
     cursor: pointer;
     color: var(--text-color);
-    position: absolute;
+    position: fixed;
     right: 60px;
     top: 34px;
     z-index: 10;
+    max-height: 10px;
 }
 
 #toggleTheme{
@@ -138,7 +128,7 @@ html {
   
   /* Home */
   .background-image {
-    background-image: url('img/fitness-man-battle-ropes-gym-600nw-2465140971\ 1.png');
+    background-image: url('/assets/fitness-man-battle-ropes-gym-600nw-2465140971\ 1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -196,9 +186,14 @@ html {
   /* telas maiores */
   @media screen and (min-width: 768px) {
     .menu-mobile {
+      width: 20vh;
         height: 40vh;
-        padding-top: 70px;
-        gap: 20px;
+        padding-top: 90px;
+        gap: 30px;
+    }
+
+    .menu-mobile span{
+        font-size: 25px;
     }
     
     .menu-link {
