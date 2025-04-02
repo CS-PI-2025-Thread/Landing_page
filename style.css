@@ -1,11 +1,23 @@
+body {
+  background: #313131;
+  font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
 .team {
   justify-items: center;
   align-items: center;
 }
 
 .div-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 700px;
+  gap: 30px;
+  margin: 20px;
 }
 
 .card {
@@ -13,6 +25,7 @@
   justify-items: center;
   align-items: center;
   margin: 10px;
+  max-width: 310px;
 }
 
 .card h3,
@@ -21,41 +34,37 @@ p {
 }
 
 .div-img {
-  margin: 10px;
+  /*margin: 10px;
+  margin-top: 15px !important;*/
+  margin: 5px;
 }
 
 .div-img img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.div-content {
+  justify-items: center;
+  text-align: center;
+  margin: 5px;
 }
 
 .media-member {
   display: flex;
 }
 
-.media-member-img {
+.bi-github,
+.bi-linkedin,
+.bi-envelope-fill {
   width: 32px;
   height: 32px;
+  font-size: 32px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 3px;
   margin-bottom: 3px;
-}
-
-.div-content {
-  justify-items: center;
-  margin: 10px;
-}
-
-.tabuleiro {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(100px, 1fr)
-  ); /* Ajusta o número de colunas automaticamente */
-  gap: 10px; /* Espaço entre as células */
-  padding: 20px;
-  max-width: 500px; /* Ajuste opcional para limitar a largura */
-  margin: auto;
+  color: #ffffff;
 }
