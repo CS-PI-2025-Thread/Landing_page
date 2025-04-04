@@ -79,7 +79,7 @@ html {
     top: 0;
     right: -100%;
     width: 100px;
-    height: 40vh;
+    height: 40%;
     text-align: center;
     padding-top: 60px;
     border-left: 3px solid var(--border-corlor);
@@ -87,6 +87,7 @@ html {
     list-style: none;
     transition: right 0.5s ease;
     padding-left: 10px;
+    font-size:medium;
 }
   
 .menu-mobile.active {
@@ -128,7 +129,7 @@ html {
   
   /* Home */
   .background-image {
-    background-image: url('/assets/fitness-man-battle-ropes-gym-600nw-2465140971\ 1.png');
+    background-image: url('../assets/academy.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -182,18 +183,78 @@ html {
     height: auto;
     border-radius: 10px;
   }
+
+    /* telas maiores */
+
+  @media screen and (min-width: 740px) {
+    .menu-mobile {
+        width: 30vh;
+        height: 60vh;
+        padding-top: 70px;
+        gap: 10px;
+    }
+
+    .menu-mobile span{
+        font-size: 15px;
+    }
+    .menu-link {
+      padding: 0 15px;
+    }
+  }
   
-  /* telas maiores */
   @media screen and (min-width: 768px) {
     .menu-mobile {
-      width: 20vh;
+        width: 20vh;
         height: 40vh;
-        padding-top: 90px;
+        padding-top: 80px;
         gap: 30px;
     }
 
     .menu-mobile span{
         font-size: 25px;
+    }
+    
+    .menu-link {
+      padding: 0 15px;
+    }
+  
+    .logo {
+      width: 50px; 
+    }
+  
+    .background-image {
+      height: 300px;
+    }
+  
+    .titulo-home {
+      font-size: 20px;
+    }
+  
+    .about-product {
+      flex-direction: row;
+      text-align: left;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    .about-product h2 {
+      font-size: 30px;
+      text-align: left;
+      margin-top: 100px;
+    }
+  }
+
+  @media screen and (min-width: 914px) {
+    .menu-mobile {
+        width: 30vh;
+        height: 70vh;
+        padding-top: 80px;
+        gap: 20px;
+    }
+
+    .menu-mobile span{
+        font-size: large;
     }
     
     .menu-link {
