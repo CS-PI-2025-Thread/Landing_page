@@ -6,6 +6,14 @@ body {
   padding: 0;
 }
 
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
 .team {
   justify-items: center;
   align-items: center;
@@ -25,7 +33,7 @@ body {
   justify-items: center;
   align-items: center;
   margin: 10px;
-  max-width: 310px;
+  width: 310px;
 }
 
 .card h3,
@@ -34,8 +42,6 @@ p {
 }
 
 .div-img {
-  /*margin: 10px;
-  margin-top: 15px !important;*/
   margin: 5px;
 }
 
@@ -50,6 +56,7 @@ p {
   justify-items: center;
   text-align: center;
   margin: 5px;
+  flex: 1;
 }
 
 .media-member {
@@ -67,4 +74,21 @@ p {
   margin-top: 3px;
   margin-bottom: 3px;
   color: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .team h2 {
+    /*width: 100%;*/
+    font-size: 50px;
+  }
+
+  .team h3 {
+    /*width: 100%;*/
+    font-size: 30px;
+  }
+
+  .team p {
+    /*width: 100%;*/
+    font-size: 20px;
+  }
 }
