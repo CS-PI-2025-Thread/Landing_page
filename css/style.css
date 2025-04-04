@@ -184,9 +184,11 @@ html {
     border-radius: 10px;
   }
 
+
+
     /* telas maiores */
 
-  @media screen and (min-width: 740px) {
+  @media screen and (min-width: 660px) {
     .menu-mobile {
         width: 30vh;
         height: 60vh;
@@ -245,46 +247,19 @@ html {
     }
   }
 
-  @media screen and (min-width: 914px) {
+  @media screen and (min-width: 840px) {
     .menu-mobile {
         width: 30vh;
-        height: 70vh;
-        padding-top: 80px;
-        gap: 20px;
+        height: 60vh;
+        padding-top: 70px;
+        gap: 10px;
     }
 
     .menu-mobile span{
-        font-size: large;
+        font-size: 15px;
     }
-    
     .menu-link {
       padding: 0 15px;
-    }
-  
-    .logo {
-      width: 50px; 
-    }
-  
-    .background-image {
-      height: 300px;
-    }
-  
-    .titulo-home {
-      font-size: 20px;
-    }
-  
-    .about-product {
-      flex-direction: row;
-      text-align: left;
-      gap: 40px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-  
-    .about-product h2 {
-      font-size: 30px;
-      text-align: left;
-      margin-top: 100px;
     }
   }
 
@@ -330,7 +305,7 @@ html {
         height: 200px;
      }
 }
-
+  
 @media screen and (min-width: 1200px) {
     .background-image {
         height: 600px;
