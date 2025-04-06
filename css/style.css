@@ -1,0 +1,381 @@
+@import url(variable.css);
+body {
+  background: var(--background-color);
+  font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  border-bottom: 5px solid var(--border-color);
+  width: 100%;
+  height: 100px;
+  top: 0;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+main {
+  height: calc(100vh- 100px);
+  margin-top: 100px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo {
+  width: 30px;
+  height: auto;
+}
+
+.menu-main {
+  display: none;
+  flex-direction: column;
+  background: var(--background-color);
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 3px solid var(--border-corlor);
+  list-style: none;
+  margin: 0;
+}
+
+.menu-main.active {
+  display: flex;
+}
+
+.menu-mobile-icon {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--text-color);
+  position: fixed;
+  right: 20px;
+  top: 30px;
+  z-index: 10;
+}
+
+.menu-mobile {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100px;
+  height: 40%;
+  text-align: center;
+  padding-top: 60px;
+  border-left: 3px solid var(--border-corlor);
+  border-bottom: 3px solid var(--border-corlor);
+  list-style: none;
+  transition: right 0.5s ease;
+  padding-left: 10px;
+  font-size: medium;
+}
+
+.menu-mobile.active {
+  right: 0;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #f4f4f4;
+  display: block;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.menu-link:hover {
+  color: var(--link-color);
+}
+
+.nav-mobile #toggleTheme {
+  display: block;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--text-color);
+  position: fixed;
+  right: 60px;
+  top: 34px;
+  z-index: 10;
+  max-height: 10px;
+}
+
+#toggleTheme {
+  display: block;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--text-color);
+  position: relative;
+  bottom: 4px;
+}
+
+/* Home */
+.background-image {
+  background-image: url("../assets/academy.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.title-home {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Sobre */
+.about-product {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  margin: 0;
+  padding: 20px;
+}
+
+.about-product h2 {
+  font-size: 30px;
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.about-product p {
+  font-size: 16px;
+  text-align: justify;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.product-image {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Planos e preços */
+.plans-prices {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 5px solid var(--border-color);
+}
+
+.plans-prices h2 {
+  font-size: 30px; 
+}
+
+.container-plans{
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  border: var(--border-color) 1px solid;
+  margin-bottom: 100px;
+}
+
+button{
+background-color: var(--button-color);
+border: none;
+border-radius: 5px;
+padding: 10px;
+cursor: pointer;
+}
+
+button:hover{
+background-color: var(--button-hover-color);
+}
+
+
+/* telas maiores */
+@media screen and (min-width: 660px) {
+  .menu-mobile {
+    width: 30vh;
+    height: 60vh;
+    padding-top: 70px;
+    gap: 10px;
+  }
+
+  .menu-mobile span {
+    font-size: 15px;
+  }
+  .menu-link {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-mobile {
+    width: 20vh;
+    height: 40vh;
+    padding-top: 80px;
+    gap: 30px;
+  }
+
+  .menu-mobile span {
+    font-size: 25px;
+  }
+
+  .menu-link {
+    padding: 0 15px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .background-image {
+    height: 300px;
+  }
+
+  .titulo-home {
+    font-size: 20px;
+  }
+
+  .about-product {
+    flex-direction: row;
+    text-align: left;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .about-product h2 {
+    font-size: 30px;
+    text-align: left;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .menu-mobile {
+    width: 30vh;
+    height: 60vh;
+    padding-top: 70px;
+    gap: 10px;
+  }
+
+  .menu-mobile span {
+    font-size: 15px;
+  }
+  .menu-link {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-mobile #toggleTheme {
+    display: none;
+  }
+  .menu-mobile-icon {
+    display: none;
+  }
+  .menu-main {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    padding: 0;
+    border-top: none;
+  }
+  .background-image {
+    height: 500px;
+  }
+
+  .title-home {
+    font-size: 36px;
+  }
+
+  .about-product {
+    max-width: 1200px;
+    gap: 80px;
+  }
+
+  .about-product h2 {
+    font-size: 50px;
+    margin-top: 60px;
+  }
+
+  .product-image {
+    flex-direction: row;
+  }
+
+  .product-image img {
+    width: 320px;
+    height: 200px;
+  }
+
+  .plans-prices {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plans-prices h2 {
+    width: 100%;
+    font-size: 50px;
+}
+
+.container-plans{
+    width: 28%;
+}
+}
+  
+@media screen and (min-width: 1200px) {
+  .background-image {
+    height: 600px;
+  }
+
+  .title-home {
+    font-size: 40px;
+  }
+
+  .about-product {
+    max-width: 1400px;
+  }
+
+  .about-product h2 {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+
+  .product-image img {
+    width: 400px;
+    height: 250px;
+  }
+}
