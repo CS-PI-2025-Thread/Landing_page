@@ -23,7 +23,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 700px;
+  max-width: 750px;
   gap: 30px;
   margin: 20px;
 }
@@ -33,7 +33,7 @@ h3 {
   justify-items: center;
   align-items: center;
   margin: 10px;
-  width: 310px;
+  width: 330px;
 }
 
 .card h3,
@@ -76,19 +76,28 @@ p {
   color: #ffffff;
 }
 
+.invisible-button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: transparent;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px;
+}
+
 @media (min-width: 1024px) {
   .team h2 {
-    /*width: 100%;*/
     font-size: 50px;
   }
 
   .team h3 {
-    /*width: 100%;*/
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .team p {
-    /*width: 100%;*/
     font-size: 20px;
   }
 }
