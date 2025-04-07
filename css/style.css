@@ -184,8 +184,45 @@ main {
   border-radius: 10px;
 }
 
-/* telas maiores */
+/* Planos e preços */
+.plans-prices {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 5px solid var(--border-color);
+}
 
+.plans-prices h2 {
+  font-size: 30px; 
+}
+
+.container-plans{
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  border: var(--border-color) 1px solid;
+  margin-bottom: 100px;
+}
+
+button{
+background-color: var(--button-color);
+border: none;
+border-radius: 5px;
+padding: 10px;
+cursor: pointer;
+}
+
+button:hover{
+background-color: var(--button-hover-color);
+}
+
+
+/* telas maiores */
 @media screen and (min-width: 660px) {
   .menu-mobile {
     width: 30vh;
@@ -302,6 +339,21 @@ main {
     width: 320px;
     height: 200px;
   }
+
+  .plans-prices {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plans-prices h2 {
+    width: 100%;
+    font-size: 50px;
+}
+
+.container-plans{
+    width: 28%;
+}
 }
   
 @media screen and (min-width: 1200px) {
