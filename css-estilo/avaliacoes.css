@@ -1,0 +1,53 @@
+.avaliacoes {
+    position: absolute;
+    top: 10em;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avaliacoes img {
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.nome {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.comentario {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+.avaliacao-info{
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    margin: 5px 0;
+    font-size: 14px; 
+    gap: 8px;   
+}
+
+.estrelas{
+    
+}
+.data-avaliacao{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+   
+}
