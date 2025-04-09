@@ -196,10 +196,10 @@ main {
 }
 
 .plans-prices h2 {
-  font-size: 30px; 
+  font-size: 30px;
 }
 
-.container-plans{
+.container-plans {
   width: 100%;
   max-width: 400px;
   padding: 15px;
@@ -209,18 +209,93 @@ main {
   margin-bottom: 100px;
 }
 
-button{
-background-color: var(--button-color);
-border: none;
-border-radius: 5px;
-padding: 10px;
-cursor: pointer;
+button {
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-button:hover{
-background-color: var(--button-hover-color);
+button:hover {
+  background-color: var(--button-hover-color);
 }
 
+/* FAQ */
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: justify;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.faq h2 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-faq-color);
+  background: var(--background-faq-color);
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.accordion-header span {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.accordion-header.start {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.accordion-header.end,
+.accordion-item.active .accordion-body.end {
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.accordion-item.active .accordion-header.end {
+  border-radius: 0;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625rem;
+  border: 1px solid var(--border-faq-color);
+  transition: 0.5s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-item.active .accordion-body {
+  max-height: 500px;
+  padding: 1.25rem;
+}
+
+.accordion-item.active .accordion-header {
+  background: var(--background-faq-color);
+}
+
+.bi-caret-down-fill {
+  color: var(--button-color);
+  transition: 0.3s ease-in-out;
+}
+.accordion-item.active .bi-caret-down-fill {
+  transform: rotate(180deg);
+}
 
 /* telas maiores */
 @media screen and (min-width: 660px) {
@@ -279,6 +354,22 @@ background-color: var(--button-hover-color);
     font-size: 30px;
     text-align: left;
     margin-top: 100px;
+  }
+
+  .faq {
+    padding: 1rem;
+  }
+
+  .faq h2 {
+    font-size: 50px;
+  }
+
+  .accordion-header {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .accordion-header span {
+    font-size: 20px;
   }
 }
 
@@ -344,18 +435,18 @@ background-color: var(--button-hover-color);
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-}
+  }
 
-.plans-prices h2 {
+  .plans-prices h2 {
     width: 100%;
     font-size: 50px;
+  }
+
+  .container-plans {
+    width: 28%;
+  }
 }
 
-.container-plans{
-    width: 28%;
-}
-}
-  
 @media screen and (min-width: 1200px) {
   .background-image {
     height: 600px;
