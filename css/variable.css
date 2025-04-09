@@ -6,7 +6,7 @@
     --border-color: #ffd700;
     --button-color: #ffd700;
     --button-hover-color: #ffdb4dbf;
-    --border-faq-color: #272727;
+    --border-faq-color: #000000;
     --background-faq-color:#272727;
 }
 :root[data-theme="contrast"]{
