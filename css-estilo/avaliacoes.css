@@ -1,13 +1,30 @@
-.avaliacoes {
-    position: absolute;
-    top: 10em;
-    color: white;
+@import url(variable.css);
+.card-avaliacao{
+    border-color: var(--border-color);
+}
+.ordenar-container {
+    margin: 20px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 18px;
+  }
+  
+  .ordenar-container select {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .avaliacoes {
+    margin-top: 2em;
+    color: var(--text-color);
     font-family: Arial, sans-serif;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 3px;
+    gap: 5px;
 }
-
 .perfil {
     display: flex;
     align-items: center;
@@ -30,7 +47,7 @@
 .comentario {
     font-size: 16px;
     line-height: 1.4;
-    color: #ccc;
+    color: var(--text-color);
 }
 
 .avaliacao-info{

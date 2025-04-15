@@ -4,30 +4,25 @@
 <head>
     <link rel="stylesheet" href="css-estilo/style.css">
     <link rel="stylesheet" href="css-estilo/avaliacoes.css">
+    <link rel="stylesheet" href="css-estilo/formulario.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação</title>
 </head>
 
 <body>
-
     <div class="Banner">
         Avaliações
     </div>
-    <div class="avaliacoes">
-        <div class="perfil">
-            <img src="imagens/icone-pessoa.jpg" alt="icone-pessoa">
-            <div class="nome">Vinicius de Oliveira</div>
-        </div>
-        <hgroup>
-            <div class="avaliacao-info">
-                <div class="estrelas">⭐⭐⭐⭐⭐</div>
-                <div class="data-avaliacao">07/04/2025</div>
-            </div>
-        </hgroup>
-        <p class="comentario">Estou devidamente satisfeito com este produto. Continuem trabalhando para que não perca a
-            qualidade, desejo a vocês muito sucesso.</p>
+    <h2 style="text-align: center; color: white;">Lista de Avaliações</h2>
+    <div class="ordenar-container">
+        <label for="ordenar">Ordenar por:</label>
+        <select id="ordenar">
+            <option value="decrescente">Mais bem avaliados</option>
+            <option value="crescente">Menos bem avaliados</option>
+        </select>
     </div>
+    <div id="avaliacoes-container" class="avaliacoes"> </div>
     <script src="script.js"></script>
 </body>
 

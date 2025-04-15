@@ -1,7 +1,7 @@
 @import url(variable.css);
 .Banner{
     width:10em;
-    background-color: black;
+    background-color:black;
     text-align: center;
     color: var(--text-color);
     padding: 5% 2%;
