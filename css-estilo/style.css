@@ -6,48 +6,112 @@
     color: var(--text-color);
     padding: 5% 2%;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:5vw;
     border-radius: 20px;
     position: relative;
 }
 body{
+    margin: 5px;
+    padding: 0;
     background-color:var(--background-color);
     color: var(--text-color);
 }
 
 @media (min-width:200px) {
     .Banner{
-        width:10.50em;
+        width:10.89em;
         padding: 15px;
         font-size: 8vw;
     }
 }
 @media (min-width:323px) {
     .Banner{
-        width: 11em;
+        width: 11.20em;
         padding: 13px;
         font-size: 8vw;
     }
 }
 @media (min-width:400px) {
     .Banner{
-        width: 11.20em;
+        width: 11.45em;
         padding: 13px;
         font-size: 8vw;
     }
 }
 @media (min-width:500px) {
     .Banner{
-        width: 11.40em;
+        width: 11.60em;
         padding: 13px;
         font-size: 8vw;
     }
 }
 @media (min-width:600px){
     .Banner{
-        width: 11.8em;
+        width: 11.90em;
         font-size: 8vw;
         padding: 10px;
-     
+    }
+}
+@media (min-width:700px){
+    .Banner{
+        width: 13.57em;
+        font-size: 7vw;
+        padding: 10px;
+    }
+}
+
+@media (min-width:800px){
+    .Banner{
+        width: 12em;
+        font-size: 8vw;
+        padding: 10px;
+    }
+}
+@media (min-width:900px){
+    .Banner{
+        width: 12.10em;
+        font-size: 8vw;
+        padding: 10px;
+    }
+}
+@media (min-width:1000px){
+    .Banner{
+        width:13.90em;
+        font-size: 7vw;
+        padding: 8px;
+    }
+}
+@media (min-width:1220px){
+    .Banner{
+        width:16em;
+        font-size: 6vw;
+        padding:6px;
+    }
+}
+@media (min-width:1200px){
+    .Banner{
+        width:16.4em;
+        font-size: 6vw;
+        padding:6px;
+    }
+}
+@media (min-width:1300px){
+    .Banner{
+        width:16.35em;
+        font-size: 6vw;
+        padding: 7px;
+    }
+}
+@media (min-width:1400px){
+    .Banner{
+        width:19.55em;
+        font-size: 5vw;
+        padding: 9px;
+    }
+}
+@media (min-width:1500px){
+    .Banner{
+        width:19.60em;
+        font-size: 5vw;
+        padding: 9px;
     }
 }
