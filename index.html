@@ -1,247 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Gym - Fitness Management Software">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Stilofit</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <div class="header-content">
-        <img class="logo" src="assets/Icon.png" alt="Academy logo" />
-        <h1>Stilofit</h1>
-      </div>
-      <nav class="header-nav">
-        <ul class="menu menu-main">
-          <li class="menu-item">
-            <a class="menu-link active" href="#home">
-              <span class="menu-text">Home</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#about">
-              <span class="menu-text">Sobre</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#plans">
-              <span class="menu-text">Planos</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#contact">
-              <span class="menu-text">Contato</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#team">
-              <span class="menu-text">Equipe</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#faq">
-              <span class="menu-text">FAQ</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="#reviews">
-              <span class="menu-text">Avaliações</span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <i id="toggleTheme" class="bi bi-circle-half" onclick="toggleContrast()"></i>
-          </li>
-        </ul>
-      </nav>
+        <div class="header-content">
+            <img class="logo" src="assets/Icon.png" alt="Academy logo" />
+            <h1>Stilofit</h1>
+        </div>
+        <nav class="header-nav">
+            <ul class="menu menu-main">
+                <li class="menu-item">
+                    <a class="menu-link active" href="#home">
+                        <span class="menu-text">Home</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#about">
+                        <span class="menu-text">Sobre</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#plans">
+                        <span class="menu-text">Planos</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#contact">
+                        <span class="menu-text">Contato</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#team">
+                        <span class="menu-text">Equipe</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#faq">
+                        <span class="menu-text">FAQ</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu-link" href="#reviews">
+                        <span class="menu-text">Avaliações</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <i id="toggleTheme" class="bi bi-circle-half" onclick="toggleContrast()"></i>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <nav class="nav-mobile">
-      <i id="toggleTheme" class="bi bi-circle-half" onclick="toggleContrast()"></i>
-      <div class="menu-mobile-icon" onclick="toggleMenu()">☰</div>
-      <ul class="menu menu-mobile">
-        <li class="menu-item">
-          <a class="menu-link active" href="#home" onclick="closeMenu()">
-            <span class="menu-text">Home</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="#about" onclick="closeMenu()">
-            <span class="menu-text">Sobre</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="#plans" onclick="closeMenu()">
-            <span class="menu-text">Planos</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="#contact" onclick="closeMenu()">
-            <span class="menu-text">Contato</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="#team" onclick="closeMenu()">
-            <span class="menu-text">Equipe</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="#faq" onclick="closeMenu()">
-            <span class="menu-text">FAQ</span>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link" href="#reviews" onclick="closeMenu()">
-            <span class="menu-text">Avaliações</span>
-          </a>
-        </li>
-      </ul>
+        <i id="toggleTheme" class="bi bi-circle-half" onclick="toggleContrast()"></i>
+        <div class="menu-mobile-icon" onclick="toggleMenu()">☰</div>
+        <ul class="menu menu-mobile">
+            <li class="menu-item">
+                <a class="menu-link active" href="#home" onclick="closeMenu()">
+                    <span class="menu-text">Home</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#about" onclick="closeMenu()">
+                    <span class="menu-text">Sobre</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#plans" onclick="closeMenu()">
+                    <span class="menu-text">Planos</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#contact" onclick="closeMenu()">
+                    <span class="menu-text">Contato</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#team" onclick="closeMenu()">
+                    <span class="menu-text">Equipe</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#faq" onclick="closeMenu()">
+                    <span class="menu-text">FAQ</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a class="menu-link" href="#reviews" onclick="closeMenu()">
+                    <span class="menu-text">Avaliações</span>
+                </a>
+            </li>
+        </ul>
     </nav>
 
     <main>
-      <div class="home" id="home">
-        <div class="background-image">
-          <div class="title-home">
-            <h2>Projeto Stilofit</h2>
-          </div>
+        <div class="home" id="home">
+            <div class="background-image">
+                <div class="title-home">
+                    <h2>Projeto Stilofit</h2>
+                </div>
+            </div>
         </div>
-      </div>
-  
-      <section class="about" id="about">
-        <div class="about-product">
-          <h2>Sobre projeto Stilofit</h2>
-        <p>
-          O sistema de gestão de academia tem como objetivo centralizar e automatizar todas as operações administrativas e operacionais da academia, proporcionando maior eficiência, controle e praticidade no dia a dia. Ele será utilizado para gerenciar o cadastro completo de clientes, incluindo informações pessoais e contratos ativos.
-          Também permitirá o gerenciamento de funcionários, com controle de cargos e acesso ao sistema conforme permissões definidas.
-          A gestão de serviços e produtos incluirá o controle de planos oferecidos, aulas, e demais itens comercializados na recepção. O módulo de caixa permitirá o registro de entradas e saídas financeiras e vendas, com integração a relatórios financeiros e fluxo de caixa.
-          O sistema também contará com a organização de turmas e horários de aulas, além da sincronização com o sistema de catraca para garantir acesso apenas a alunos em situação regular.
-          Haverá ainda funcionalidades específicas para a área técnica, como o cadastro e acompanhamento das fichas de avaliação física e fichas de treino personalizadas, permitindo um acompanhamento mais preciso da evolução dos alunos.
-          Por fim, o sistema incluirá a geração de relatórios gerenciais e financeiros detalhados, auxiliando na tomada de decisões estratégicas e no crescimento sustentável da academia.
-        </p>
-        </div>
-        <div class="product-image">
-          <img
-            src="assets/academy.png"
-            alt="Product software image 1"
-          />
-          <img
-            src="assets/academy.png"
-            alt="Product software image 2"
-          />
-          <img
-            src="assets/academy.png"
-            alt="Product software image 3"
-          />
-        </div>
-      </section>
 
-      <section class="plans-prices" id="plans">
-        <h2>Planos e Preços</h2>
-        <div class="container-plans">
-          <h3>Plano A</h3>
-          <p>
-            Lorem ipsum dolor sit amet. Ut doloribus quaerat eum maxime
-            consectetur est magni dolore qui omnis ipsum vel provident
-            necessitatibus? Est explicabo rerum qui obcaecati possimus aut laborum
-            porro ea magni vero aut doloremque perferendis. Qui quia quisquam id
-            consequuntur fugiat id molestiae illum ea voluptatum cupiditate rem
-            consequatur iure non molestias blanditiis rem recusandae consequuntur.
-            Et debitis praesentium eos harum veniam est autem error et asperiores
-            saepe.
-          </p>
-          <h3>R$19,00</h3>
-          <button>Assine já</button>
-        </div>
-        <div class="container-plans">
-          <h3>Plano B</h3>
-          <p>
-            Lorem ipsum dolor sit amet. Ut doloribus quaerat eum maxime
-            consectetur est magni dolore qui omnis ipsum vel provident
-            necessitatibus? Est explicabo rerum qui obcaecati possimus aut laborum
-            porro ea magni vero aut doloremque perferendis. Qui quia quisquam id
-            consequuntur fugiat id molestiae illum ea voluptatum cupiditate rem
-            consequatur iure non molestias blanditiis rem recusandae consequuntur.
-            Et debitis praesentium eos harum veniam est autem error et asperiores
-            saepe.
-          </p>
-          <h3>R$49,00</h3>
-          <button>Assine já</button>
-        </div>
-        <div class="container-plans">
-          <h3>Plano C</h3>
-          <p>
-            Lorem ipsum dolor sit amet. Ut doloribus quaerat eum maxime
-            consectetur est magni dolore qui omnis ipsum vel provident
-            necessitatibus? Est explicabo rerum qui obcaecati possimus aut laborum
-            porro ea magni vero aut doloremque perferendis. Qui quia quisquam id
-            consequuntur fugiat id molestiae illum ea voluptatum cupiditate rem
-            consequatur iure non molestias blanditiis rem recusandae consequuntur.
-            Et debitis praesentium eos harum veniam est autem error et asperiores
-            saepe.
-          </p>
-          <h3>R$89,00</h3>
-          <button>Assine já</button>
-        </div>
-      </section>
-   
-      <section class="faq" id="faq">
-        <h2>Perguntas Frequentes</h2>
-        <div id="accordion">
-          <div class="accordion-item active">
-            <button class="accordion-header start">
-              <span>Pergunta 1</span>
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
-          <div class="accordion-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              scelerisque, nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec
-              lacinia nunc nunc nec. Nullam scelerisque, nunc nec lacinia ultricies,
-              nunc nunc ultricies nunc, nec lacinia nunc nunc nec. Nullam scelerisque,
-              nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec lacinia nunc
-              nunc nec. Nullam scelerisque, nunc nec lacinia ultricies, nunc nunc
-              ultricies nunc, nec lacinia nunc nunc nec.
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header">
-            <span>Pergunta 2</span>
-            <i class="bi bi-caret-down-fill"></i>
-          </button>
-          <div class="accordion-body">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              scelerisque, nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec
-              lacinia nunc nunc nec. Nullam scelerisque, nunc nec lacinia ultricies,
-              nunc nunc ultricies nunc, nec lacinia nunc nunc nec. Nullam scelerisque,
-              nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec lacinia nunc
-              nunc nec. Nullam scelerisque, nunc nec lacinia ultricies, nunc nunc
-              ultricies nunc, nec lacinia nunc nunc nec.
-            </p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header end">
-            <span>Pergunta 3</span>
-            <i class="bi bi-caret-down-fill"></i>
-          </button>
-          <div class="accordion-body end">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              scelerisque, nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec
-              lacinia nunc nunc nec. Nullam scelerisque, nunc nec lacinia ultricies,
-              nunc nunc ultricies nunc, nec lacinia nunc nunc nec. Nullam scelerisque,
-              nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec lacinia nunc
-              nunc nec. Nullam scelerisque, nunc nec lacinia ultricies, nunc nunc
-              ultricies nunc, nec lacinia nunc nunc nec.
-            </p>
-          </div>
-        </div>
-      </section>
-  </main>
-  <script src="script.js"></script>
+        <section class="about" id="about">
+            <div class="about-product">
+                <h2>Sobre projeto Stilofit</h2>
+                <p>
+                    O sistema de gestão de academia tem como objetivo centralizar e automatizar todas as operações
+                    administrativas e operacionais da academia, proporcionando maior eficiência, controle e praticidade
+                    no dia a dia. Ele será utilizado para gerenciar o cadastro completo de clientes, incluindo
+                    informações pessoais e contratos ativos.
+                    Também permitirá o gerenciamento de funcionários, com controle de cargos e acesso ao sistema
+                    conforme permissões definidas.
+                    A gestão de serviços e produtos incluirá o controle de planos oferecidos, aulas, e demais itens
+                    comercializados na recepção. O módulo de caixa permitirá o registro de entradas e saídas financeiras
+                    e vendas, com integração a relatórios financeiros e fluxo de caixa.
+                    O sistema também contará com a organização de turmas e horários de aulas, além da sincronização com
+                    o sistema de catraca para garantir acesso apenas a alunos em situação regular.
+                    Haverá ainda funcionalidades específicas para a área técnica, como o cadastro e acompanhamento das
+                    fichas de avaliação física e fichas de treino personalizadas, permitindo um acompanhamento mais
+                    preciso da evolução dos alunos.
+                    Por fim, o sistema incluirá a geração de relatórios gerenciais e financeiros detalhados, auxiliando
+                    na tomada de decisões estratégicas e no crescimento sustentável da academia.
+                </p>
+            </div>
+            <div class="product-image">
+                <img src="assets/academy.png" alt="Product software image 1" />
+                <img src="assets/academy.png" alt="Product software image 2" />
+                <img src="assets/academy.png" alt="Product software image 3" />
+            </div>
+        </section>
+
+        <section class="plans-prices" id="plans">
+            <h2>Planos e Preços</h2>
+            <div class="container-plans">
+                <h3>Plano A</h3>
+                <p>
+                    Lorem ipsum dolor sit amet. Ut doloribus quaerat eum maxime
+                    consectetur est magni dolore qui omnis ipsum vel provident
+                    necessitatibus? Est explicabo rerum qui obcaecati possimus aut laborum
+                    porro ea magni vero aut doloremque perferendis. Qui quia quisquam id
+                    consequuntur fugiat id molestiae illum ea voluptatum cupiditate rem
+                    consequatur iure non molestias blanditiis rem recusandae consequuntur.
+                    Et debitis praesentium eos harum veniam est autem error et asperiores
+                    saepe.
+                </p>
+                <h3>R$19,00</h3>
+                <button>Assine já</button>
+            </div>
+            <div class="container-plans">
+                <h3>Plano B</h3>
+                <p>
+                    Lorem ipsum dolor sit amet. Ut doloribus quaerat eum maxime
+                    consectetur est magni dolore qui omnis ipsum vel provident
+                    necessitatibus? Est explicabo rerum qui obcaecati possimus aut laborum
+                    porro ea magni vero aut doloremque perferendis. Qui quia quisquam id
+                    consequuntur fugiat id molestiae illum ea voluptatum cupiditate rem
+                    consequatur iure non molestias blanditiis rem recusandae consequuntur.
+                    Et debitis praesentium eos harum veniam est autem error et asperiores
+                    saepe.
+                </p>
+                <h3>R$49,00</h3>
+                <button>Assine já</button>
+            </div>
+            <div class="container-plans">
+                <h3>Plano C</h3>
+                <p>
+                    Lorem ipsum dolor sit amet. Ut doloribus quaerat eum maxime
+                    consectetur est magni dolore qui omnis ipsum vel provident
+                    necessitatibus? Est explicabo rerum qui obcaecati possimus aut laborum
+                    porro ea magni vero aut doloremque perferendis. Qui quia quisquam id
+                    consequuntur fugiat id molestiae illum ea voluptatum cupiditate rem
+                    consequatur iure non molestias blanditiis rem recusandae consequuntur.
+                    Et debitis praesentium eos harum veniam est autem error et asperiores
+                    saepe.
+                </p>
+                <h3>R$89,00</h3>
+                <button>Assine já</button>
+            </div>
+        </section>
+
+        <section class="team" id="team">
+            <h2>Conheça a Equipe</h2>
+            <div class="div-cards">
+
+                <div class="card">
+                    <div class="div-img">
+                        <img src="assets/img/gustavo.jpeg" alt="Gustavo Gimenez">
+                    </div>
+                    <div class="div-content">
+                        <h3>Gustavo Gimenez</h2>
+                            <p>Product Owner</p>
+                            <div class="media-member">
+                                <a href="https://github.com/gustavo-berti" target="_blank"><i
+                                        class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/gustavo-gimenez-berti-70797a250/"
+                                    target="_blank"><i class="bi bi-linkedin"></i></a>
+                                <a href="mailto:gutigimenez15@gmail.com">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="div-img">
+                        <img src="assets/img/luan.jpeg" alt="Luan Gustavo Marques">
+                    </div>
+                    <div class="div-content">
+                        <h3>Luan Gustavo Marques</h2>
+                            <p>Scrum Master</p>
+                            <div class="media-member">
+                                <a href="https://github.com/luangust4vo/" target="_blank"><i
+                                        class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/luan-gustavo-mariano-marques/" target="_blank"><i
+                                        class="bi bi-linkedin"></i></a>
+                                <a href="mailto:gluan1213@gmail.com">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="div-img">
+                        <img src="assets/img/laryssa.jpg" alt="Laryssa Bino">
+                    </div>
+                    <div class="div-content">
+                        <h3>Laryssa Bino</h2>
+                            <p>Desenvolvedora</p>
+                            <div class="media-member">
+                                <a href="https://github.com/larybino" target="_blank"><i class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/laryssabino/" target="_blank"><i
+                                        class="bi bi-linkedin"></i></a>
+                                <a href="mailto:binolaryssa@gmail.com">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="div-img">
+                        <img src="assets/img/thalles.jpeg" alt="Thalles Sorrilha">
+                    </div>
+                    <div class="div-content">
+                        <h3>Thalles Sorrilha</h2>
+                            <p>Desenvolvedor</p>
+                            <div class="media-member">
+                                <a href="https://github.com/ThallesSorrilha" target="_blank"><i
+                                        class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/thalles-sorrilha-meira-barros-945436321/"
+                                    target="_blank"><i class="bi bi-linkedin"></i></a>
+                                <a href="mailto:thallessorrilha@gmail.com">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="div-img">
+                        <img src="assets/img/vinicius.jpeg" alt="Vinícius Rebussi">
+                    </div>
+                    <div class="div-content">
+                        <h3>Vinícius Rebussi</h2>
+                            <p>Desenvolvedor</p>
+                            <div class="media-member">
+                                <a href="https://github.com/Vinicius-Oliveira-R" target="_blank"><i
+                                        class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/vinicius-rebussi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                    target="_blank"><i class="bi bi-linkedin"></i></a>
+                                <a href="mailto:viniciusoliveira12353@gmail.com">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <h2>Perguntas Frequentes</h2>
+            <div id="accordion">
+                <div class="accordion-item active">
+                    <button class="accordion-header start">
+                        <span>Pergunta 1</span>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                            scelerisque, nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec
+                            lacinia nunc nunc nec. Nullam scelerisque, nunc nec lacinia ultricies,
+                            nunc nunc ultricies nunc, nec lacinia nunc nunc nec. Nullam scelerisque,
+                            nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec lacinia nunc
+                            nunc nec. Nullam scelerisque, nunc nec lacinia ultricies, nunc nunc
+                            ultricies nunc, nec lacinia nunc nunc nec.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Pergunta 2</span>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                            scelerisque, nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec
+                            lacinia nunc nunc nec. Nullam scelerisque, nunc nec lacinia ultricies,
+                            nunc nunc ultricies nunc, nec lacinia nunc nunc nec. Nullam scelerisque,
+                            nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec lacinia nunc
+                            nunc nec. Nullam scelerisque, nunc nec lacinia ultricies, nunc nunc
+                            ultricies nunc, nec lacinia nunc nunc nec.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header end">
+                        <span>Pergunta 3</span>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </button>
+                    <div class="accordion-body end">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                            scelerisque, nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec
+                            lacinia nunc nunc nec. Nullam scelerisque, nunc nec lacinia ultricies,
+                            nunc nunc ultricies nunc, nec lacinia nunc nunc nec. Nullam scelerisque,
+                            nunc nec lacinia ultricies, nunc nunc ultricies nunc, nec lacinia nunc
+                            nunc nec. Nullam scelerisque, nunc nec lacinia ultricies, nunc nunc
+                            ultricies nunc, nec lacinia nunc nunc nec.
+                        </p>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

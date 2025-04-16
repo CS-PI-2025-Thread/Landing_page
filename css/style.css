@@ -297,6 +297,87 @@ button:hover {
   transform: rotate(180deg);
 }
 
+/*Equipe */
+.team h2 {
+  font-size: 30px;
+}
+
+.team h3 {
+  font-size: 20px;
+}
+
+.team {
+  justify-items: center;
+  align-items: center;
+}
+
+.div-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.card {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: 5px;
+  width: 280px;
+}
+
+.card h3,
+p {
+  margin: 3px;
+}
+
+.div-img {
+  margin: 5px;
+}
+
+.div-img img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.div-content {
+  justify-items: center;
+  text-align: center;
+  margin: 5px;
+  flex: 1;
+}
+
+.media-member {
+  display: flex;
+}
+
+.bi-github,
+.bi-linkedin,
+.bi-envelope-fill {
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  color: #ffffff;
+}
+
+.invisible-button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: transparent;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px;
+}
+
 /* telas maiores */
 @media screen and (min-width: 660px) {
   .menu-mobile {
@@ -444,6 +525,31 @@ button:hover {
 
   .container-plans {
     width: 28%;
+  }
+
+  .div-img img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .div-cards {
+    gap: 30px;
+  }
+
+  .card {
+    width: 330px;
+  }
+
+  .team h2 {
+    font-size: 50px;
+  }
+
+  .team h3 {
+    font-size: 26px;
+  }
+
+  .team p {
+    font-size: 20px;
   }
 }
 

@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
         button.classList.add("accordion-header");
         button.setAttribute("aria-expanded", "false");
         button.innerHTML = `
-                  <span>${item.pergunta}</span>
-                  <i class="bi bi-caret-down-fill"></i>
-              `;
+                    <span>${item.pergunta}</span>
+                    <i class="bi bi-caret-down-fill"></i>
+                `;
 
         const body = document.createElement("div");
         body.classList.add("accordion-body");
