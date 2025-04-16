@@ -1,20 +1,129 @@
 @import url(variable.css);
-.Banner{
-    width:10em;
-    background-color:black;
+header {
+    border-bottom: 5px solid var(--border-color);
     text-align: center;
-    color: var(--text-color);
-    padding: 5% 2%;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 20px;
-    position: relative;
+    font-size: 32px;
 }
 body{
-    margin: 5px;
+    margin: 0;
     padding: 0;
     background-color:var(--background-color);
     color: var(--text-color);
 }
+.card-avaliacao{
+    border-color: var(--border-color);
+}
+.ordenar-container {
+    margin: 20px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 18px;
+  }
+  
+  .ordenar-container select {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .avaliacao-card {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: (--text-color);
+    box-shadow: 0 0 10px var(--border-color);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .perfil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .nome {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .avaliacao-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .estrelas {
+    color: #FFD700;
+  }
+  
+  .comentario {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+
+.data-avaliacao{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+}
+
+.filtro-container{
+    display: flex;
+    align-items: center;
+    
+}
+.btn-ver-mais {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+@media (min-width:500px){
+    .comentario{
+        max-width: 75%;
+        font-size: 18px;
+    }
+}
+@media (min-width:600px){
+    .comentario{
+        max-width: 70%;
+    }
+}
+@media (min-width:700px){
+    .comentario{
+        max-width: 65%;
+    }
+}
+@media (min-width:800px){
+    .comentario{
+        max-width: 60%;
+    }
+}
+@media (min-width:900px){
+    .comentario{
+        max-width: 50%;
+        font-size: 20px;
+    }
+}
+
 
 @media (min-width:200px) {
     .Banner{

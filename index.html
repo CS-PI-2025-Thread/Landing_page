@@ -11,31 +11,32 @@
 </head>
 
 <body>
-    <div class="Banner">
-        Avaliações
-    </div>
+    <header>
+        <h1>Avaliação</h1>
+    </header>
+    <div>
     <h2 style="text-align: center; color: white;">Lista de Avaliações</h2>
+
     <div class="ordenar-container">
         <label for="ordenar">Ordenar por:</label>
         <select id="ordenar">
             <option value="decrescente">Mais bem avaliados</option>
             <option value="crescente">Menos bem avaliados</option>
         </select>
+        <div  class="filtro-container">
+            <label for="filtroNota">Filtrar por nota:</label>
+            <select id="filtroNota">
+                <option value="todas">Todas</option>
+                <option value="5">5 estrelas</option>
+                <option value="4">4 estrelas</option>
+                <option value="3">3 estrelas</option>
+                <option value="2">2 estrelas</option>
+                <option value="1">1 estrela</option>
+            </select>
+        </div>
     </div>
-    
-    <div class="filtro-container">
-        <label for="filtroNota">Filtrar por nota:</label>
-        <select id="filtroNota">
-            <option value="todas">Todas</option>
-            <option value="5">5 estrelas</option>
-            <option value="4">4 estrelas</option>
-            <option value="3">3 estrelas</option>
-            <option value="2">2 estrelas</option>
-            <option value="1">1 estrela</option>
-        </select>
-    </div>
-
-    <div id="avaliacoes-container" class="avaliacoes"> </div>
+        
+   <div id="avaliacoes-container" class="avaliacoes"> </div>
     <script src="script.js"></script>
 </body>
 

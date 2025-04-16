@@ -16,7 +16,7 @@ const avaliacoes = [
   {
     nome: "Bianca Souza",
     nota: 4,
-    comentario: "Gostei bastante do serviço!",
+    comentario: "Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!Gostei bastante do serviço!",
     data: "06/04/2025",
     imagem: "imagens/icone-pessoa.jpg"
   }
@@ -32,6 +32,13 @@ function renderAvaliacoes(lista) {
   lista.forEach(avaliacao => {
     const div = document.createElement("div");
     div.className = "avaliacao-card";
+
+    const comentarioCurto = avaliacao.comentario.length > 100
+      ? avaliacao.comentario.slice(0, 100) + "..."
+      : avaliacao.comentario;
+
+    const precisaVerMais = avaliacao.comentario.length > 100;
+
     div.innerHTML = `
       <div class="perfil">
         <img src="${avaliacao.imagem}" alt="icone-pessoa">
@@ -41,11 +48,32 @@ function renderAvaliacoes(lista) {
         <div class="estrelas">${"⭐".repeat(avaliacao.nota)}</div>
         <div class="data-avaliacao">${avaliacao.data}</div>
       </div>
-      <p class="comentario">${avaliacao.comentario}</p>
+      <p class="comentario" data-completo="${avaliacao.comentario}">
+        ${comentarioCurto}
+      </p>
+      ${precisaVerMais ? `<button class="btn-ver-mais">Ver mais</button>` : ""}
     `;
+
     container.appendChild(div);
   });
+
+  // Adiciona funcionalidade ao botão "Ver mais"
+  document.querySelectorAll(".btn-ver-mais").forEach(botao => {
+    botao.addEventListener("click", () => {
+      const p = botao.previousElementSibling;
+      const textoCompleto = p.getAttribute("data-completo");
+
+      if (botao.innerText === "Ver mais") {
+        p.innerText = textoCompleto;
+        botao.innerText = "Ver menos";
+      } else {
+        p.innerText = textoCompleto.slice(0, 100) + "...";
+        botao.innerText = "Ver mais";
+      }
+    });
+  });
 }
+
 
 // Aplica filtro + ordenação
 function aplicarFiltros() {
