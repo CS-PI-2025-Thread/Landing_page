@@ -84,7 +84,6 @@ body{
 .filtro-container{
     display: flex;
     align-items: center;
-    
 }
 .btn-ver-mais {
     background-color: transparent;
@@ -123,7 +122,6 @@ body{
         font-size: 20px;
     }
 }
-
 
 @media (min-width:200px) {
     .Banner{
