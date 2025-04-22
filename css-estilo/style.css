@@ -82,8 +82,7 @@ body{
 }
 
 .filtro-container{
-    display: flex;
-    align-items: center;
+   
 }
 .btn-ver-mais {
     background-color: transparent;
