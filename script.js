@@ -36,19 +36,20 @@ fetch('avaliacoes.json')
       const precisaVerMais = avaliacao.comentario.length > 100;
   
       div.innerHTML = `
-        <div class="perfil">
-          <img src="${avaliacao.imagem}" alt="icone-pessoa">
-          <div class="nome">${avaliacao.nome}</div>
-        </div>
-        <div class="avaliacao-info">
-          <div class="estrelas">${"⭐".repeat(avaliacao.nota)}</div>
-          <div class="data-avaliacao">${avaliacao.data}</div>
-        </div>
-        <p class="comentario" data-completo="${avaliacao.comentario}">
-          ${comentarioCurto}
-        </p>
-        ${precisaVerMais ? `<button class="btn-ver-mais">Ver mais</button>` : ""}
-      `;
+  <div class="perfil">
+    <img src="${avaliacao.imagem}" alt="icone-pessoa">
+    <div class="nome">${avaliacao.nome}</div>
+  </div>
+  <div class="avaliacao-info">
+    <div class="estrelas">${"⭐".repeat(avaliacao.nota)}</div>
+    <div class="data-avaliacao">${avaliacao.data}</div>
+  </div>
+  <p class="comentario" data-completo="${avaliacao.comentario}">
+    ${comentarioCurto}
+  </p>
+  ${precisaVerMais ? '<button class="btn-ver-mais">Ver mais</button>' : ''}
+`;
+
   
       container.appendChild(div);
     }
@@ -58,7 +59,7 @@ fetch('avaliacoes.json')
       botao.addEventListener("click", () => {
         const p = botao.previousElementSibling;
         const textoCompleto = p.getAttribute("data-completo");
-  
+    
         if (botao.innerText === "Ver mais") {
           p.innerText = textoCompleto;
           botao.innerText = "Ver menos";
@@ -68,7 +69,7 @@ fetch('avaliacoes.json')
         }
       });
     });
-  
+    
     // Mostrar ou ocultar o botão global
     btnVerMais.style.display = avaliacoesVisiveis < lista.length ? "inline-block" : "none";
   }
@@ -110,3 +111,24 @@ fetch('avaliacoes.json')
 
   // Iniciar com todas
   aplicarFiltros();
+
+const form = document.getElementById("form-avaliacao");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const novaAvaliacao = {
+        nome: document.getElementById("nome").value,
+        nota: parseInt(document.getElementById("nota").value),
+        comentario: document.getElementById("comentario").value,
+        imagem: document.getElementById("imagem").value || "img/default.png",
+        data: new Date().toLocaleDateString('pt-BR')
+    };
+
+    // Adiciona ao início da lista
+    avaliacoes.unshift(novaAvaliacao);
+    aplicarFiltros();
+
+    // Limpa o formulário
+    form.reset();
+});

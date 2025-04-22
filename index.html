@@ -35,7 +35,24 @@
             </select>
         </div>
     </div>
-        
+    <section class="formulario-avaliacao">
+        <h2 style="text-align:center; color:white;">Deixe sua Avaliação</h2>
+        <form id="form-avaliacao">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <select id="nota" required>
+                <option value="">Nota</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+            <textarea id="comentario" placeholder="Seu comentário" rows="4" required></textarea>
+            <input type="url" id="imagem" placeholder="URL da imagem (opcional)">
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+    </section>
+    
    <div id="avaliacoes-container" class="avaliacoes"> </div>
    <div style="text-align: center; margin-top: 20px;">
     <button id="btn-ver-mais-comentarios" style="display: none;">Ver mais comentários</button>

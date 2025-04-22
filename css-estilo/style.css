@@ -18,6 +18,8 @@ body{
     text-align: center;
     color: var(--text-color);
     font-size: 18px;
+    border-bottom: 20px;
+    gap: 10px;
   }
   
   .ordenar-container select {
@@ -82,7 +84,7 @@ body{
 }
 
 .filtro-container{
-   
+   margin-bottom:10px;
 }
 .btn-ver-mais {
     background-color: transparent;
@@ -93,7 +95,43 @@ body{
     font-size: 0.9rem;
     margin-top: 5px;
   }
-  
+  .formulario-avaliacao {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px var(--border-color);
+}
+
+#form-avaliacao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-avaliacao input,
+#form-avaliacao textarea,
+#form-avaliacao select,
+#form-avaliacao button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+}
+
+#form-avaliacao button {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-avaliacao button:hover {
+    background-color: var(-----button-hover-color);
+}
+
 @media (min-width:500px){
     .comentario{
         max-width: 75%;
