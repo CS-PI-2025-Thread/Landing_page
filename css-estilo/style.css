@@ -17,9 +17,9 @@ body{
     margin: 20px;
     text-align: center;
     color: var(--text-color);
-    font-size: 18px;
+    font-size: 25px;
+    flex-wrap: wrap;
     border-bottom: 20px;
-    gap: 10px;
   }
   
   .ordenar-container select {
