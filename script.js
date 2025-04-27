@@ -67,3 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Erro ao carregar FAQ:", error));
 });
+document.addEventListener('keydown', function(event) {
+  if (event.altKey && event.key.toLowerCase() === 'q') {
+    event.preventDefault(); // Impede comportamento padrão
+    document.getElementById('formulario').requestSubmit(); // Envia o formulário
+  }
+});

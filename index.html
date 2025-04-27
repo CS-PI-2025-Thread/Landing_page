@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -188,46 +189,52 @@
             </div>
         </section>
         <section>
-                <div class="contato">
-                    <h1>Contato</h1>
-                    <div class="form_box">
-                        <div class="title-contato">Envie sua mensagem</div>
-                       <form action=""method="get">
-                        <input type="text" name="name" placeholder="Seu nome" required>
-                        <input type="text" name="telefone" placeholder="Digite seu telefone">
-                        <input type="email" name="email" placeholder="Seu E-mail" required>
-                        <input type="text" name="subject" placeholder="Assunto" required>
-                        <textarea name="message" placeholder="Digite sua mensagem" required></textarea>
-                        <button type="submit">Envie uma mensagem </button>
-                       </form>
-                       <div class="contato-equipe">
+            <div class="contato">
+                <h1>Contato</h1>
+                <div class="form_box">
+                    <div class="title-contato">Envie sua mensagem</div>
+                    <form action="" method="get">
+                        <label for="nome" class="label-visually-hidden">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+                        <label for="telefone" class="label-visually-hidden">Telefone</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone">
+
+                        <label for="email" class="label-visually-hidden">email</label>
+                        <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+
+                        <label for="assunto" class="label-visually-hidden">Digite o assunto</label>
+                        <input type="text" id="assunto" name="subject" placeholder="Assunto" required>
+
+                        <label for="mensagem" class="label-visually-hidden">Digite uma mensagem</label>
+                        <textarea name="message" id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+                        <button type="submit" id="btnEnviar" accesskey="q">Envie uma mensagem (ALT+Q)</button>
+                    </form>
+                    <div class="contato-equipe">
                         <h1 id="suporte-title">Contato para suporte da Equipe Thread</h1>
-                      
+
                         <div class="contato-cards" role="group" aria-labelledby="suporte-title">
-                          <div class="card-contato">
-                            <h2 id="github-title">Github do Projeto</h2>
-                            <a href="https://github.com/CS-PI-2025-Thread" 
-                               target="_blank" 
-                               aria-labelledby="github-title" 
-                               aria-label="Link para o repositório no GitHub da Equipe Thread" 
-                               tabindex="0">
-                              <i class="bi bi-github" aria-hidden="true"></i>
-                            </a>
-                          </div>
-                      
-                          <div class="card-contato">
-                            <h2 id="email-title">Email para contato</h2>
-                            <a href="mailto:threadequipesuporte@gmail.com" 
-                               aria-labelledby="email-title" 
-                               aria-label="Enviar email para suporte da Equipe Thread" 
-                               tabindex="0">
-                              <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-                            </a>
-                          </div>
+                            <div class="card-contato">
+                                <h2 id="github-title">Github do Projeto</h2>
+                                <a href="https://github.com/CS-PI-2025-Thread" target="_blank"
+                                    aria-labelledby="github-title"
+                                    aria-label="Link para o repositório no GitHub da Equipe Thread" tabindex="0">
+                                    <i class="bi bi-github" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <div class="card-contato">
+                                <h2 id="email-title">Email para contato</h2>
+                                <a href="mailto:threadequipesuporte@gmail.com" aria-labelledby="email-title"
+                                    aria-label="Enviar email para suporte da Equipe Thread" tabindex="0">
+                                    <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
-                      </div>                      
                     </div>
                 </div>
+            </div>
         </section>
         <section class="team" id="team">
             <h2>Conheça a Equipe</h2>
@@ -388,4 +395,5 @@
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>
