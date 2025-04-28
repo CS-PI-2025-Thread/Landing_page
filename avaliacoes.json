@@ -1,0 +1,59 @@
+[
+    {
+      "nome": "Ana Souza",
+      "nota": 5,
+      "comentario": "Excelente atendimento e qualidade! Fiquei muito satisfeito com o serviço e com certeza voltarei mais vezes.",
+      "data": "2025-04-15",
+      "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+      "nome": "Carlos Lima",
+      "nota": 4,
+      "comentario": "Muito bom, só acho que poderia ter sido um pouco mais rápido. No geral, gostei bastante.",
+      "data": "2025-04-10",
+      "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+      "nome": "Beatriz Fernandes",
+      "nota": 3,
+      "comentario": "Foi uma experiência razoável. Houve alguns problemas no início, mas foram resolvidos.",
+      "data": "2025-04-08",
+      "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+      "nome": "João Pereira",
+      "nota": 2,
+      "comentario": "O atendimento deixou a desejar e tive que esperar bastante tempo para ser atendido.",
+      "data": "2025-04-05",
+      "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+      "nome": "Larissa Gomes",
+      "nota": 1,
+      "comentario": "Infelizmente minha experiência não foi boa. Não recomendo.",
+      "data": "2025-04-03",
+      "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+      "nome": "Marcos Silva",
+      "nota": 5,
+      "comentario": "Atendimento impecável, ambiente agradável e funcionários bem treinados. Com certeza voltarei mais vezes!",
+      "data": "2025-04-02",
+      "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+      "nome": "Fernanda Oliveira",
+      "nota": 4,
+      "comentario": "Serviço de ótima qualidade, mas o ambiente estava um pouco cheio no dia da minha visita.",
+      "data": "2025-03-30",
+      "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    },
+    {
+      "nome": "Ricardo Santos",
+      "nota": 3,
+      "comentario": "Poderia ser melhor. Algumas falhas no processo de atendimento.",
+      "data": "2025-03-28",
+      "imagem": "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+    }
+  ]
+  
