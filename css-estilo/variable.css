@@ -1,0 +1,21 @@
+/* Configuração geral */
+:root{
+    --background-color: #313131;
+    --text-color: #f4f4f4;
+    --link-color: #ffd700;
+    --border-color: #ffd700;
+    --button-color: #ffd700;
+    --button-hover-color: #ffdb4dbf;
+    --border-faq-color: #272727;
+    --background-faq-color:#272727;
+}
+:root[data-theme="contrast"]{
+    --background-color: #000000;
+    --text-color: #FFFFFF;
+    --link-color: #ffd900;
+    --border-color: #ffd900;
+    --button-color: #ffd900;
+    --button-hover-color: #ffcc00e9;
+    --border-faq-color: #ffd900;
+    --background-faq-color:#000000;
+}

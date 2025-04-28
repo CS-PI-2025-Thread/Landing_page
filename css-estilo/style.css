@@ -1,0 +1,261 @@
+@import url(variable.css);
+header {
+    border-bottom: 5px solid var(--border-color);
+    text-align: center;
+    font-size: 32px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color:var(--background-color);
+    color: var(--text-color);
+}
+.card-avaliacao{
+    border-color: var(--border-color);
+}
+.ordenar-container {
+    margin: 20px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 25px;
+    flex-wrap: wrap;
+    border-bottom: 20px;
+  }
+  
+  .ordenar-container select {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .avaliacao-card {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: (--text-color);
+    box-shadow: 0 0 10px var(--border-color);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .perfil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .nome {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .avaliacao-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .estrelas {
+    color: #FFD700;
+  }
+  
+  .comentario {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+
+.data-avaliacao{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; 
+}
+
+.filtro-container{
+   margin-bottom:10px;
+}
+.btn-ver-mais {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  .formulario-avaliacao {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px var(--border-color);
+}
+
+#form-avaliacao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-avaliacao input,
+#form-avaliacao textarea,
+#form-avaliacao select,
+#form-avaliacao button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+}
+
+#form-avaliacao button {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#form-avaliacao button:hover {
+    background-color: var(-----button-hover-color);
+}
+
+@media (min-width:500px){
+    .comentario{
+        max-width: 75%;
+        font-size: 18px;
+    }
+}
+@media (min-width:600px){
+    .comentario{
+        max-width: 70%;
+    }
+}
+@media (min-width:700px){
+    .comentario{
+        max-width: 65%;
+    }
+}
+@media (min-width:800px){
+    .comentario{
+        max-width: 60%;
+    }
+}
+@media (min-width:900px){
+    .comentario{
+        max-width: 50%;
+        font-size: 20px;
+    }
+}
+
+@media (min-width:200px) {
+    .Banner{
+        width:10.89em;
+        padding: 15px;
+        font-size: 8vw;
+    }
+}
+@media (min-width:323px) {
+    .Banner{
+        width: 11.20em;
+        padding: 13px;
+        font-size: 8vw;
+    }
+}
+@media (min-width:400px) {
+    .Banner{
+        width: 11.45em;
+        padding: 13px;
+        font-size: 8vw;
+    }
+}
+@media (min-width:500px) {
+    .Banner{
+        width: 11.60em;
+        padding: 13px;
+        font-size: 8vw;
+    }
+}
+@media (min-width:600px){
+    .Banner{
+        width: 11.90em;
+        font-size: 8vw;
+        padding: 10px;
+    }
+}
+@media (min-width:700px){
+    .Banner{
+        width: 13.57em;
+        font-size: 7vw;
+        padding: 10px;
+    }
+}
+
+@media (min-width:800px){
+    .Banner{
+        width: 12em;
+        font-size: 8vw;
+        padding: 10px;
+    }
+}
+@media (min-width:900px){
+    .Banner{
+        width: 12.10em;
+        font-size: 8vw;
+        padding: 10px;
+    }
+}
+@media (min-width:1000px){
+    .Banner{
+        width:13.90em;
+        font-size: 7vw;
+        padding: 8px;
+    }
+}
+@media (min-width:1220px){
+    .Banner{
+        width:16em;
+        font-size: 6vw;
+        padding:6px;
+    }
+}
+@media (min-width:1200px){
+    .Banner{
+        width:16.4em;
+        font-size: 6vw;
+        padding:6px;
+    }
+}
+@media (min-width:1300px){
+    .Banner{
+        width:16.35em;
+        font-size: 6vw;
+        padding: 7px;
+    }
+}
+@media (min-width:1400px){
+    .Banner{
+        width:19.55em;
+        font-size: 5vw;
+        padding: 9px;
+    }
+}
+@media (min-width:1500px){
+    .Banner{
+        width:19.60em;
+        font-size: 5vw;
+        padding: 9px;
+    }
+}
