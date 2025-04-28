@@ -67,133 +67,126 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Erro ao carregar FAQ:", error));
   })
-let avaliacoes = [];
-let avaliacoesVisiveis = 0;
-const porPagina = 5;
-const btnVerMais = document.getElementById("btn-ver-mais-comentarios");
-
-fetch('avaliacoes.json') 
-  .then(res => res.ok ? res.text() : Promise.reject('Erro ao carregar'))
-  .then(texto => {
-    avaliacoes = JSON.parse(texto);
-    aplicarFiltros(); // inicia com todas já filtradas/ordenadas
-  })
-  .catch(err => {
-    console.error('Erro ao carregar avaliações:', err);
-  });
-
-
-  const container = document.getElementById("avaliacoes-container");
-  const seletorOrdenar = document.getElementById("ordenar");
-  const seletorFiltroNota = document.getElementById("filtroNota");
-
-  // Renderiza as avaliações
-  function renderAvaliacoes(lista) {
-    container.innerHTML = "";
-    const fim = Math.min(avaliacoesVisiveis, lista.length);
+  document.addEventListener("DOMContentLoaded", () => {
+    let reviews = [];
+    let reviewsVisible = 5;
+    const reviewsPerPage = 5;
   
-    for (let i = 0; i < fim; i++) {
-      const avaliacao = lista[i];
-      const div = document.createElement("div");
-      div.className = "avaliacao-card";
-  
-      const comentarioCurto = avaliacao.comentario.length > 100
-        ? avaliacao.comentario.slice(0, 100) + "..."
-        : avaliacao.comentario;
-  
-      const precisaVerMais = avaliacao.comentario.length > 100;
-  
-      div.innerHTML = `
-  <div class="perfil">
-    <img src="${avaliacao.imagem}" alt="icone-pessoa">
-    <div class="nome">${avaliacao.nome}</div>
-  </div>
-  <div class="avaliacao-info">
-    <div class="estrelas">${"⭐".repeat(avaliacao.nota)}</div>
-    <div class="data-avaliacao">${avaliacao.data}</div>
-  </div>
-  <p class="comentario" data-completo="${avaliacao.comentario}">
-    ${comentarioCurto}
-  </p>
-  ${precisaVerMais ? '<button class="btn-ver-mais">Ver mais</button>' : ''}
-`;
-
-  
-      container.appendChild(div);
+    // Carregar avaliações do arquivo JSON
+    function loadReviews() {
+      fetch("avaliacoes.json") // Alterar para o caminho correto do seu arquivo JSON
+        .then(response => response.json())
+        .then(data => {
+          reviews = data;
+          renderReviews();
+        })
+        .catch(error => console.error("Erro ao carregar avaliações:", error));
     }
   
-    // Ver mais dentro do comentário
-    document.querySelectorAll(".btn-ver-mais").forEach(botao => {
-      botao.addEventListener("click", () => {
-        const p = botao.previousElementSibling;
-        const textoCompleto = p.getAttribute("data-completo");
-    
-        if (botao.innerText === "Ver mais") {
-          p.innerText = textoCompleto;
-          botao.innerText = "Ver menos";
+    // Função para renderizar as avaliações
+    function renderReviews() {
+      const container = document.getElementById("reviewsContainer");
+      container.innerHTML = "";
+  
+      const filteredReviews = applyFiltersAndSort(reviews);
+      const endIndex = Math.min(reviewsVisible, filteredReviews.length);
+  
+      for (let i = 0; i < endIndex; i++) {
+        const review = filteredReviews[i];
+        const div = document.createElement("div");
+        div.classList.add("review-card");
+  
+        div.innerHTML = `
+            <div class="reviewer-name">${review.nome}</div>
+            <div class="review-rating">${"⭐".repeat(review.nota)}</div>
+            <div class="review-comment">${review.comentario}</div>
+            ${review.imagem ? `<img src="${review.imagem}" alt="Imagem de perfil" />` : ""}
+        `;
+  
+        container.appendChild(div);
+      }
+  
+      const btnLoadMore = document.getElementById("btnLoadMoreReviews");
+      btnLoadMore.style.display = reviewsVisible < filteredReviews.length ? "block" : "none";
+    }
+  
+    // Função para aplicar filtros e ordenação
+    function applyFiltersAndSort(reviewsList) {
+      let filteredReviews = [...reviews];
+  
+      const sortSelect = document.getElementById("sortReviews");
+      const filterSelect = document.getElementById("filterByRating");
+  
+      const selectedRating = filterSelect.value;
+      if (selectedRating !== "todas") {
+        filteredReviews = filteredReviews.filter(review => review.nota == selectedRating);
+      }
+  
+      const selectedSort = sortSelect.value;
+      if (selectedSort === "crescente") {
+        filteredReviews.sort((a, b) => a.nota - b.nota);
+      } else {
+        filteredReviews.sort((a, b) => b.nota - a.nota);
+      }
+  
+      return filteredReviews;
+    }
+  
+    // Event listener para o botão "Ver mais"
+    document.getElementById("btnLoadMoreReviews").addEventListener("click", () => {
+      reviewsVisible += reviewsPerPage;
+      renderReviews();
+    });
+  
+    // Event listeners para filtros e ordenação
+    document.getElementById("sortReviews").addEventListener("change", renderReviews);
+    document.getElementById("filterByRating").addEventListener("change", renderReviews);
+  
+    // Função para lidar com a seleção das estrelas
+    const ratingStars = document.getElementById("ratingStars");
+    const ratingValue = document.getElementById("ratingValue");
+  
+    ratingStars.addEventListener("click", (event) => {
+      if (event.target.classList.contains("star")) {
+        const selectedRating = parseInt(event.target.getAttribute("data-value"));
+        ratingValue.value = selectedRating;  // Atualiza o valor da nota no campo oculto
+        updateStarSelection(selectedRating); // Atualiza as estrelas visuais
+      }
+    });
+  
+    // Função para atualizar a visualização das estrelas
+    function updateStarSelection(selectedRating) {
+      const stars = ratingStars.querySelectorAll(".star");
+      stars.forEach(star => {
+        const starValue = parseInt(star.getAttribute("data-value"));
+        if (starValue <= selectedRating) {
+          star.classList.add("selected");
         } else {
-          p.innerText = textoCompleto.slice(0, 100) + "...";
-          botao.innerText = "Ver mais";
+          star.classList.remove("selected");
         }
       });
+    }
+  
+    // Função para enviar uma nova avaliação
+    const formReview = document.getElementById("formReview");
+    formReview.addEventListener("submit", function (e) {
+      e.preventDefault();
+  
+      const newReview = {
+        nome: document.getElementById("reviewerName").value,
+        nota: parseInt(ratingValue.value),
+        comentario: document.getElementById("reviewComment").value,
+        imagem: document.getElementById("reviewImage").value || "img/default.png",
+        data: new Date().toLocaleDateString("pt-BR")
+      };
+  
+      reviews.unshift(newReview); // Adicionar no início da lista
+      renderReviews(); // Re-renderizar a lista de avaliações
+  
+      formReview.reset(); // Limpar o formulário
+      updateStarSelection(0); // Limpar as estrelas selecionadas
     });
-    
-    // Mostrar ou ocultar o botão global
-    btnVerMais.style.display = avaliacoesVisiveis < lista.length ? "inline-block" : "none";
-  }
   
-  // Aplica filtro + ordenação
-  function aplicarFiltros() {
-    let lista = [...avaliacoes];
-  
-    const filtro = seletorFiltroNota.value;
-    const ordenacao = seletorOrdenar.value;
-  
-    if (filtro !== "todas") {
-      const notaFiltrada = parseInt(filtro);
-      lista = lista.filter(a => a.nota === notaFiltrada);
-    }
-  
-    if (ordenacao === "crescente") {
-      lista.sort((a, b) => a.nota - b.nota);
-    } else {
-      lista.sort((a, b) => b.nota - a.nota);
-    }
-  
-    avaliacoesVisiveis = porPagina;
-    renderAvaliacoes(lista);
-  
-    // Botão "ver mais comentários"
-    btnVerMais.onclick = () => {
-      avaliacoesVisiveis += porPagina;
-      renderAvaliacoes(lista);
-    };
-  }
-  
-  // Eventos
-  seletorOrdenar.addEventListener("change", aplicarFiltros);
-  seletorFiltroNota.addEventListener("change", aplicarFiltros);
-
-  // Iniciar com todas
-  aplicarFiltros();
-
-const form = document.getElementById("form-avaliacao");
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const novaAvaliacao = {
-        nome: document.getElementById("nome").value,
-        nota: parseInt(document.getElementById("nota").value),
-        comentario: document.getElementById("comentario").value,
-        imagem: document.getElementById("imagem").value || "img/default.png",
-        data: new Date().toLocaleDateString('pt-BR')
-    };
-
-    // Adiciona ao início da lista
-    avaliacoes.unshift(novaAvaliacao);
-    aplicarFiltros();
-
-    // Limpa o formulário
-    form.reset();
+    loadReviews();
   });
+  

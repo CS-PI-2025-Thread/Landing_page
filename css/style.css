@@ -479,14 +479,14 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .sort-container select,
 .filter-container select {
   margin-top: 10px;
   padding: 8px;
-  font-size: 1rem;
+  font-size: 1.50rem;
   border-radius: 5px;
   border: 1px solid var(--border-color);
   background-color: var(--background-color);
