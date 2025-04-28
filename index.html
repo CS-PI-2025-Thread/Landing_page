@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -344,7 +345,63 @@
                     </div>
                 </div>
         </section>
+        <section class="reviews" id="reviews">
+            <h2>Avaliações</h2>
+        
+            <div class="reviews-filters">
+                <div class="sort-container">
+                    <label for="sortReviews">Ordenar por:</label>
+                    <select id="sortReviews">
+                        <option value="decrescente">Mais bem avaliados</option>
+                        <option value="crescente">Menos bem avaliados</option>
+                    </select>
+                </div>
+                <div class="filter-container">
+                    <label for="filterByRating">Filtrar por nota:</label>
+                    <select id="filterByRating">
+                        <option value="todas">Todas</option>
+                        <option value="5">5 estrelas</option>
+                        <option value="4">4 estrelas</option>
+                        <option value="3">3 estrelas</option>
+                        <option value="2">2 estrelas</option>
+                        <option value="1">1 estrela</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="review-form">
+                <h3>Deixe sua Avaliação</h3>
+                <form id="formReview">
+                    <input type="text" id="reviewerName" placeholder="Seu nome" required />
+                
+                    <div class="rating-stars" id="ratingStars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <input type="hidden" id="ratingValue" name="rating" required />
+                
+                    <textarea id="reviewComment" placeholder="Seu comentário" rows="4" required></textarea>
+                    <input type="url" id="reviewImage" placeholder="URL da imagem (opcional)" />
+                
+                    <button type="submit">Enviar Avaliação</button>
+                </form>
+            </div>
+            
+            <div id="reviewsContainer" class="reviews-list"></div>
+            <div class="load-more-container">
+                <button id="btnLoadMoreReviews" style="display: none;">Ver mais comentários</button>
+            </div>            
+            <div id="reviewsContainer" class="reviews-list"></div>
+            <div class="load-more-container">
+                <button id="btnLoadMoreReviews" style="display: none;">Ver mais comentários</button>
+            </div>
+        </section>
+        
     </main>
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
+
 </html>
