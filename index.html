@@ -191,29 +191,33 @@
         <section>
             <div class="contato">
                 <h1>Contato</h1>
-                <div class="form_box">
-                    <div class="title-contato">Envie sua mensagem</div>
-                    <form action="" method="get">
-                        <label for="nome" class="label-visually-hidden">Nome</label>
-                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
 
-                        <label for="telefone" class="label-visually-hidden">Telefone</label>
-                        <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone">
+                <div class="container-contato">
+                    <div class="form_box">
+                        <div class="title-contato">Envie sua mensagem</div>
+                        <form action="" method="get">
+                            <label for="nome" class="label-visually-hidden">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
 
-                        <label for="email" class="label-visually-hidden">email</label>
-                        <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                            <label for="telefone" class="label-visually-hidden">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone">
 
-                        <label for="assunto" class="label-visually-hidden">Digite o assunto</label>
-                        <input type="text" id="assunto" name="subject" placeholder="Assunto" required>
+                            <label for="email" class="label-visually-hidden">email</label>
+                            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
 
-                        <label for="mensagem" class="label-visually-hidden">Digite uma mensagem</label>
-                        <textarea name="message" id="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                            <label for="assunto" class="label-visually-hidden">Digite o assunto</label>
+                            <input type="text" id="assunto" name="subject" placeholder="Assunto" required>
 
-                        <button type="submit" id="btnEnviar" accesskey="q">Envie uma mensagem (ALT+Q)</button>
-                    </form>
+                            <label for="mensagem" class="label-visually-hidden">Digite uma mensagem</label>
+                            <textarea name="message" id="mensagem" placeholder="Digite sua mensagem"
+                                required></textarea>
+
+                            <button type="submit" id="btnEnviar" accesskey="q">Envie uma mensagem (ALT+Q)</button>
+                        </form>
+                    </div>
+
                     <div class="contato-equipe">
-                        <h1 id="suporte-title">Contato para suporte da Equipe Thread</h1>
-
+                        <h1>Contato para suporte da Equipe Thread</h1>
                         <div class="contato-cards" role="group" aria-labelledby="suporte-title">
                             <div class="card-contato">
                                 <h2 id="github-title">Github do Projeto</h2>
@@ -392,61 +396,6 @@
                     </div>
                 </div>
         </section>
-        <section class="reviews" id="reviews">
-            <h2>Avaliações</h2>
-        
-            <div class="reviews-filters">
-                <div class="sort-container">
-                    <label for="sortReviews">Ordenar por:</label>
-                    <select id="sortReviews">
-                        <option value="decrescente">Mais bem avaliados</option>
-                        <option value="crescente">Menos bem avaliados</option>
-                    </select>
-                </div>
-                <div class="filter-container">
-                    <label for="filterByRating">Filtrar por nota:</label>
-                    <select id="filterByRating">
-                        <option value="todas">Todas</option>
-                        <option value="5">5 estrelas</option>
-                        <option value="4">4 estrelas</option>
-                        <option value="3">3 estrelas</option>
-                        <option value="2">2 estrelas</option>
-                        <option value="1">1 estrela</option>
-                    </select>
-                </div>
-            </div>
-        
-            <div class="review-form">
-                <h3>Deixe sua Avaliação</h3>
-                <form id="formReview">
-                    <input type="text" id="reviewerName" placeholder="Seu nome" required />
-                
-                    <div class="rating-stars" id="ratingStars">
-                        <span class="star" data-value="1">&#9733;</span>
-                        <span class="star" data-value="2">&#9733;</span>
-                        <span class="star" data-value="3">&#9733;</span>
-                        <span class="star" data-value="4">&#9733;</span>
-                        <span class="star" data-value="5">&#9733;</span>
-                    </div>
-                    <input type="hidden" id="ratingValue" name="rating" required />
-                
-                    <textarea id="reviewComment" placeholder="Seu comentário" rows="4" required></textarea>
-                    <input type="url" id="reviewImage" placeholder="URL da imagem (opcional)" />
-                
-                    <button type="submit">Enviar Avaliação</button>
-                </form>
-            </div>
-            
-            <div id="reviewsContainer" class="reviews-list"></div>
-            <div class="load-more-container">
-                <button id="btnLoadMoreReviews" style="display: none;">Ver mais comentários</button>
-            </div>            
-            <div id="reviewsContainer" class="reviews-list"></div>
-            <div class="load-more-container">
-                <button id="btnLoadMoreReviews" style="display: none;">Ver mais comentários</button>
-            </div>
-        </section>
-        
     </main>
 </body>
 

@@ -353,25 +353,10 @@ p {
   flex: 1;
 }
 
-
 .media-member {
   display: flex;
 }
-.contato-cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
 
-.card-contato {
-  background-color: var(--background-faq-color);
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 200px;
-
-}
 .label-visually-hidden {
   position: absolute;
   width: 1px;
@@ -384,22 +369,140 @@ p {
   border: 0;
 }
 
-.card-contato h2 {
-  font-size: 18px;
-  color: var(--text-color);
-  margin-bottom: 15px;
+/* Contato */
+.container-contato {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
-input:focus,
-textarea:focus,
-button:focus {
-  outline: 3px solid #005fcc;
-  outline-offset: 2px;
+
+.form_box,
+.contato-equipe {
+  flex: 1;
+  min-width: 250px;
+ 
+}
+
+.contato-cards {
+  border: 2px solid var(--border-color);
+  box-shadow: 0 0 5px var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+.contato h1{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.card-contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 90%;
+}
+
+.card-contato h2 {
+  font-size: 30px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  gap: 10px;
 }
 
 .card-contato a i {
   font-size: 50px;
-  color: #ffffff;
+  color: var(--text-color);
 }
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid var(--border-color);
+  outline-offset: 2px;
+}
+
+.form_box {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: var(--background-faq-color);
+}
+
+.form_box .title-contato {
+  color: var(--text-color);
+  font-size: 36px;
+}
+
+.form_box form {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 32px;
+}
+
+.form_box input[name="name"],
+.form_box input[name="email"],
+.form_box input[name="telefone"] {
+  width: 100%;
+}
+
+.form_box input,
+.form_box textarea {
+  width: calc(50% - 8px);
+  border-radius: 8px;
+  height: 48px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form_box input:first-child {
+  margin-right: 16px;
+}
+
+.form_box input[name=subject] {
+  width: 100%;
+}
+
+.form_box textarea {
+  width: 100%;
+  height: 180px;
+  padding: 16px;
+}
+
+.form_box button {
+  display: block;
+  border: none;
+  outline: none;
+  width: 180px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.form_box button:houver {
+  background-color: var(--button-hover-color);
+}
+
+.contato {
+  text-align: center;
+
+}
+.contato-equipe{
+  background-color: var(--background-faq-color);
+}
+.contato-equipe h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+@media(min-width:412) {}
+
 
 .bi-github,
 .bi-linkedin,
@@ -503,182 +606,6 @@ button:focus {
   }
 }
 
-.reviews {
-  padding: 40px 20px;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.reviews h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-.reviews-filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.sort-container,
-.filter-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 2rem;
-}
-
-.sort-container select,
-.filter-container select {
-  margin-top: 10px;
-  padding: 8px;
-  font-size: 1.50rem;
-  border-radius: 5px;
-  border: 1px solid var(--border-color);
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.review-form {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px var(--border-color);
-}
-
-.review-form h3 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#formReview {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#formReview input,
-#formReview textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  font-size: 1rem;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-#formReview button {
-  background-color: var(--border-color);
-  color: var(--text-color);
-  font-weight: bold;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  font-size: 1rem;
-}
-
-#formReview button:hover {
-  background-color: var(--button-hover-color);
-}
-
-/* Estrelas clicáveis */
-.rating-stars {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.rating-stars .star {
-  color: #ccc;
-  transition: color 0.3s;
-}
-
-.rating-stars .star.selected,
-.rating-stars .star:hover,
-.rating-stars .star:hover ~ .star {
-  color: #FFD700; /* dourado */
-}
-
-/* Cards de avaliações */
-.reviews-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.review-card {
-  background-color: var(--background-color);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 0 8px var(--border-color);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.review-card .reviewer-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.reviewer-profile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.reviewer-name {
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.review-rating {
-  color: #FFD700;
-  font-size: 1.2rem;
-}
-
-.review-comment {
-  font-size: 1rem;
-  color: var(--text-color);
-}
-
-.review-date {
-  font-size: 0.8rem;
-  color: #888;
-}
-
-.load-more-container {
-  text-align: center;
-  margin-top: 30px;
-}
-
-#btnLoadMoreReviews {
-  background-color: transparent;
-  color: var(--text-color);
-  border: 1px solid var(--border-color);
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-#btnLoadMoreReviews:hover {
-  background-color: var(--border-color);
-}
 
 @media screen and (min-width: 840px) {
   .menu-mobile {
@@ -781,72 +708,6 @@ button:focus {
   .team p {
     font-size: 20px;
   }
-}
-
-.contato {
-  text-align: center;
-}
-
-.form_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: var(--background-faq-color);
-}
-
-.form_box .title-contato {
-  color: var(--text-color);
-  font-size: 24px;
-}
-
-.form_box form {
-  display: flex;
-  align-items: start;
-  flex-wrap: wrap;
-  padding: 32px;
-}
-.form_box input[name="name"],
-.form_box input[name="email"], 
-.form_box input[name="telefone"]{
-  width: 100%;
-}
-
-.form_box input,
-.form_box textarea {
-  width: calc(50% - 8px);
-  border-radius: 8px;
-  height: 48px;
-  font-size: 18px;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.form_box input:first-child {
-  margin-right: 16px;
-}
-
-.form_box input[name=subject] {
-  width: 100%;
-}
-
-.form_box textarea {
-  width: 100%;
-  height: 180px;
-  padding: 16px;
-}
-
-.form_box button {
-  display: block;
-  border: none;
-  outline: none;
-  width: 180px;
-  height: 48px;
-  cursor: pointer;
-}
-
-.form_box button:houver {
-  background-color: var(--button-hover-color);
 }
 
 
