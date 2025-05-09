@@ -426,17 +426,23 @@ button:focus {
   outline: 3px solid var(--border-color);
   outline-offset: 2px;
 }
-
+.back-contato{background-color: var(--background-faq-color);}
 .form_box {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  background-color: var(--background-faq-color);
 }
 
 .form_box .title-contato {
   color: var(--text-color);
+  margin-top: 10px;
   font-size: 36px;
+}
+.contato-equipe .title-contato{
+  color: var(--text-color);
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .form_box form {
@@ -493,15 +499,20 @@ button:focus {
   text-align: center;
 
 }
-.contato-equipe{
+.contato div{
   background-color: var(--background-faq-color);
+}
+.contato-equipe{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
 }
 .contato-equipe h1 {
   font-size: 35px;
   margin-bottom: 20px;
 }
 
-@media(min-width:412) {}
 
 
 .bi-github,
