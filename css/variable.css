@@ -8,6 +8,7 @@
     --button-hover-color: #ffdb4dbf;
     --border-faq-color: #000000;
     --background-faq-color:#272727;
+    --stars-color:#ffd700;
 }
 :root[data-theme="contrast"]{
     --background-color: #000000;
@@ -18,4 +19,5 @@
     --button-hover-color: #ffcc00e9;
     --border-faq-color: #ffd900;
     --background-faq-color:#000000;
+    --stars-color:#ffd700;
 }

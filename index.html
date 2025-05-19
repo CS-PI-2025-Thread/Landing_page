@@ -345,66 +345,65 @@
                     </div>
                 </div>
         </section>
-       <section class="reviews" id="reviews">
-<h2>Avaliações</h2>
+        <section class="reviews" id="reviews">
+            <h1>Avaliações</h1>
+            <div class="average-rating">
+                <div class="stars">
+                    <span class="average-score">
+                        <h2>Média das avaliações:<br/>4.5</h2>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="reviews-list">
+                <div class="review-item">
+                    <strong>João Silva</strong> <span class="date">15/05/2025</span>
+                    <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <p>Ótimo aplicativo, ajuda bastante no controle dos treinos!<br /></p>
+                </div>
+                <div class="review-item">
+                    <strong>Maria Souza</strong> <span class="date">12/05/2025</span>
+                    <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <p>Faltam alguns recursos, mas é bem útil para iniciantes.</p>
+                </div>
+            </div>
 
-  <div class="average-rating">
-    <span class="average-score">4.5</span>
-    <div class="stars">
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-fill"></i>
-      <i class="bi bi-star-half"></i>
-    </div>
-    <span>(23 avaliações)</span>
-  </div>
-  <div class="reviews-list">
-    <div class="review-item">
-      <strong>João Silva</strong> <span class="date">15/05/2025</span>
-      <div class="stars">
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star"></i>
-      </div>
-      <p>Ótimo aplicativo, ajuda bastante no controle dos treinos!</p>
-    </div>
-    <div class="review-item">
-      <strong>Maria Souza</strong> <span class="date">12/05/2025</span>
-      <div class="stars">
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-fill"></i>
-        <i class="bi bi-star-half"></i>
-        <i class="bi bi-star"></i>
-      </div>
-      <p>Faltam alguns recursos, mas é bem útil para iniciantes.</p>
-    </div>
-  </div>
+            <form id="reviewForm">
+                <h3>Deixe sua avaliação</h3>
+                <label for="name">Nome:</label><br />
+                <input type="text" id="name" name="name" placeholder="Digite seu nome: " required /><br />
 
-  <form id="reviewForm">
-    <h3>Deixe sua avaliação</h3>
-    <label for="name">Nome:</label><br />
-    <input type="text" id="name" name="name" required /><br />
+                <label for="rating">Avaliação:</label><br />
+                <select id="rating" name="rating" required>
+                    <option value="">Selecione</option>
+                    <option value="5">🌟🌟🌟🌟🌟</option>
+                    <option value="4">🌟🌟🌟🌟</option>
+                    <option value="3">🌟🌟🌟</option>
+                    <option value="2">🌟🌟</option>
+                    <option value="1">🌟</option>
+                </select><br />
 
-    <label for="rating">Avaliação:</label><br />
-    <select id="rating" name="rating" required>
-      <option value="">Selecione</option>
-      <option value="5">5 estrelas</option>
-      <option value="4">4 estrelas</option>
-      <option value="3">3 estrelas</option>
-      <option value="2">2 estrelas</option>
-      <option value="1">1 estrela</option>
-    </select><br />
-
-    <label for="comment">Comentário:</label><br />
-    <textarea id="comment" name="comment" rows="4" required></textarea><br />
-
-    <button type="submit">Enviar Avaliação</button>
-  </form>
-</section>
+                <label for="comment">Comentário:</label><br />
+                <textarea id="comment" name="comment" rows="4"placeholder="Escreva aqui sua avaliação: " required></textarea>
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </section>
 
     </main>
 </body>

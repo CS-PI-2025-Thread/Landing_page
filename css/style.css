@@ -1,4 +1,5 @@
 @import url(variable.css);
+
 body {
   background: var(--background-color);
   font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
@@ -6,10 +7,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
+
 /* Header */
 header {
   display: flex;
@@ -293,6 +296,7 @@ button:hover {
   color: var(--button-color);
   transition: 0.3s ease-in-out;
 }
+
 .accordion-item.active .bi-caret-down-fill {
   transform: rotate(180deg);
 }
@@ -377,8 +381,42 @@ p {
   right: 0px;
   padding: 0px;
 }
-/* avaliações */
 
+/* avaliações */
+.reviews{
+  display: block;
+  align-items: center;
+  text-align: center;
+}
+.reviews-list {
+  display: block;
+  background-color: var(--background-faq-color);
+  border-radius: 10px;
+  margin:0 auto;
+  width: 85vh;
+}
+.reviews-list p{
+  margin-bottom: 20px;
+}
+.stars i{
+  color: var(--stars-color);
+}
+#reviewForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#reviewForm input[name],
+#reviewForm select[name="rating"],
+#reviewForm textarea[name="comment"] {
+  width: 50vh;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
 
 /* telas maiores */
 @media screen and (min-width: 660px) {
@@ -392,6 +430,7 @@ p {
   .menu-mobile span {
     font-size: 15px;
   }
+
   .menu-link {
     padding: 0 15px;
   }
@@ -467,6 +506,7 @@ p {
   .menu-mobile span {
     font-size: 15px;
   }
+
   .menu-link {
     padding: 0 15px;
   }
@@ -476,9 +516,11 @@ p {
   .nav-mobile #toggleTheme {
     display: none;
   }
+
   .menu-mobile-icon {
     display: none;
   }
+
   .menu-main {
     display: flex;
     position: static;
@@ -487,6 +529,7 @@ p {
     padding: 0;
     border-top: none;
   }
+
   .background-image {
     height: 500px;
   }
