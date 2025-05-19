@@ -345,61 +345,67 @@
                     </div>
                 </div>
         </section>
-        <section class="reviews" id="reviews">
-            <h2>Avaliações</h2>
-        
-            <div class="reviews-filters">
-                <div class="sort-container">
-                    <label for="sortReviews">Ordenar por:</label>
-                    <select id="sortReviews">
-                        <option value="decrescente">Mais bem avaliados</option>
-                        <option value="crescente">Menos bem avaliados</option>
-                    </select>
-                </div>
-                <div class="filter-container">
-                    <label for="filterByRating">Filtrar por nota:</label>
-                    <select id="filterByRating">
-                        <option value="todas">Todas</option>
-                        <option value="5">5 estrelas</option>
-                        <option value="4">4 estrelas</option>
-                        <option value="3">3 estrelas</option>
-                        <option value="2">2 estrelas</option>
-                        <option value="1">1 estrela</option>
-                    </select>
-                </div>
-            </div>
-        
-            <div class="review-form">
-                <h3>Deixe sua Avaliação</h3>
-                <form id="formReview">
-                    <input type="text" id="reviewerName" placeholder="Seu nome" required />
-                
-                    <div class="rating-stars" id="ratingStars">
-                        <span class="star" data-value="1">&#9733;</span>
-                        <span class="star" data-value="2">&#9733;</span>
-                        <span class="star" data-value="3">&#9733;</span>
-                        <span class="star" data-value="4">&#9733;</span>
-                        <span class="star" data-value="5">&#9733;</span>
-                    </div>
-                    <input type="hidden" id="ratingValue" name="rating" required />
-                
-                    <textarea id="reviewComment" placeholder="Seu comentário" rows="4" required></textarea>
-                    <input type="url" id="reviewImage" placeholder="URL da imagem (opcional)" />
-                
-                    <button type="submit">Enviar Avaliação</button>
-                </form>
-            </div>
-            
-            <div id="reviewsContainer" class="reviews-list"></div>
-            <div class="load-more-container">
-                <button id="btnLoadMoreReviews" style="display: none;">Ver mais comentários</button>
-            </div>            
-            <div id="reviewsContainer" class="reviews-list"></div>
-            <div class="load-more-container">
-                <button id="btnLoadMoreReviews" style="display: none;">Ver mais comentários</button>
-            </div>
-        </section>
-        
+       <section class="reviews" id="reviews">
+<h2>Avaliações</h2>
+
+  <div class="average-rating">
+    <span class="average-score">4.5</span>
+    <div class="stars">
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-fill"></i>
+      <i class="bi bi-star-half"></i>
+    </div>
+    <span>(23 avaliações)</span>
+  </div>
+  <div class="reviews-list">
+    <div class="review-item">
+      <strong>João Silva</strong> <span class="date">15/05/2025</span>
+      <div class="stars">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+      </div>
+      <p>Ótimo aplicativo, ajuda bastante no controle dos treinos!</p>
+    </div>
+    <div class="review-item">
+      <strong>Maria Souza</strong> <span class="date">12/05/2025</span>
+      <div class="stars">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        <i class="bi bi-star"></i>
+      </div>
+      <p>Faltam alguns recursos, mas é bem útil para iniciantes.</p>
+    </div>
+  </div>
+
+  <form id="reviewForm">
+    <h3>Deixe sua avaliação</h3>
+    <label for="name">Nome:</label><br />
+    <input type="text" id="name" name="name" required /><br />
+
+    <label for="rating">Avaliação:</label><br />
+    <select id="rating" name="rating" required>
+      <option value="">Selecione</option>
+      <option value="5">5 estrelas</option>
+      <option value="4">4 estrelas</option>
+      <option value="3">3 estrelas</option>
+      <option value="2">2 estrelas</option>
+      <option value="1">1 estrela</option>
+    </select><br />
+
+    <label for="comment">Comentário:</label><br />
+    <textarea id="comment" name="comment" rows="4" required></textarea><br />
+
+    <button type="submit">Enviar Avaliação</button>
+  </form>
+</section>
+
     </main>
 </body>
 <script src="script.js"></script>
